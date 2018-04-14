@@ -1,0 +1,21 @@
+<div data-sly-test="${wcmmode.edit}" data-sly-unwrap>
+    <div class="edit-info" data-sly-test="${!properties.columnheaders}">
+        <span class="fa fa-info-circle"></span> Please set column titles
+    </div>
+    <div class="edit-info" data-sly-test="${properties.columnheaders}">
+        <span class="fa fa-info-circle"></span> Drop table rows here
+    </div>
+</div>
+<div class="irtable" data-sly-test="${!wcmmode.edit}" data-sly-use.statoiltable="com.statoil.reinvent.components.wcmuse.StatoilTable">
+    <ul class="irtable-headers" data-sly-list.header="${statoiltable.headers}">
+        <li class="irtable-headers-item">${header}</li>
+    </ul>
+    <div data-sly-resource="${'rows' @ resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+</div>
+
+<div class="table-edit" data-sly-test="${wcmmode.edit}" data-sly-use.statoiltable="com.statoil.reinvent.components.wcmuse.StatoilTable">
+    <div data-sly-list.header="${statoiltable.headers}" class="irtable-row-wrapper">
+        <div class="table-edit-cell">${header}</div>
+    </div>
+    <div data-sly-resource="${'rows' @ resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+</div>

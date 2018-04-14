@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <checkboxgroup
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.checkboxgroup"
+        sling:message="Categories"/>
+    <checkboxgrouperror
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.checkboxgroup.error"
+        sling:message="Please check at least one category"/>
+    <email
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.email"
+        sling:message="E-mail"/>
+    <emailerror
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.email.error"
+        sling:message="Please fill out a valid e-mail address"/>
+    <firstname
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.firstname"
+        sling:message="First name"/>
+    <firstnameerror
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.firstname.error"
+        sling:message="Please fill out your first name"/>
+    <generalnews
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.generalnews"
+        sling:message="General news"/>
+    <lastname
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.lastname"
+        sling:message="Last name"/>
+    <lastnameerror
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.lastname.error"
+        sling:message="Please fill out your last name"/>
+    <stockmarketannouncements
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.stockmarketannouncements"
+        sling:message="Stock market announcements"/>
+    <submit
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.submit"
+        sling:message="Subscribe"/>
+    <submitfailed
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.submit.failed"
+        sling:message="Server Error"/>
+    <submitfinished
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.submit.finished"
+        sling:message="Success"/>
+    <submitloading
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.submit.loading"
+        sling:message="Sending..."/>
+    <submitsucceeded
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="subscribeform.submit.succeeded"
+        sling:message="Thank You!"/>
+</jcr:root>

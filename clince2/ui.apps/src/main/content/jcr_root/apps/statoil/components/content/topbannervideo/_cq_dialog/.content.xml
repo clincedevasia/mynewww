@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Top Content"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs">
+        <items jcr:primaryType="nt:unstructured">
+            <topbannervideo
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Top Banner Video"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <source
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="The video to embed."
+                                fieldLabel="Source"
+                                name="./source"
+                                rootPath="/content/dam"/>
+                            <poster
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="A poster frame to show until the video plays or seeks. If this attribute isn't specified, nothing is displayed until the first frame is available."
+                                fieldLabel="Poster"
+                                name="./poster"
+                                rootPath="/content/dam"/>
+                            <autoplay
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="If specified, the video automatically begins to play back as soon as it can do so without stopping to finish loading the data."
+                                name="./autoplay"
+                                text="Autoplay"
+                                value="autoplay"/>
+                            <controls
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="If specified, the browser will offer controls to allow the user to control video playback, including volume, seeking, and pause/resume playback."
+                                name="./controls"
+                                text="Controls"
+                                value="controls"/>
+                            <loop
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="If specified, we will, upon reaching the end of the video, automatically seek back to the start."
+                                name="./loop"
+                                text="Loop"
+                                value="loop"/>
+                            <muted
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldDescription="If specified, the audio will be initially silenced."
+                                name="./muted"
+                                text="Muted"
+                                value="muted"/>
+                            <angle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Angle"
+                                name="./angle">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <top
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Top"
+                                        value="top"/>
+                                    <bottom
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Bottom"
+                                        value="bottom"/>
+                                    <both
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Both"
+                                        value="both"/>
+                                </items>
+                            </angle>
+                            <anglecolor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Angle color"
+                                name="./anglecolor">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <top
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Top"
+                                        value="top"/>
+                                    <bottom
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Bottom"
+                                        value="bottom"/>
+                                    <both
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Both"
+                                        value="both"/>
+                                </items>
+                            </anglecolor>
+                        </items>
+                    </column>
+                </items>
+            </topbannervideo>
+        </items>
+    </content>
+</jcr:root>

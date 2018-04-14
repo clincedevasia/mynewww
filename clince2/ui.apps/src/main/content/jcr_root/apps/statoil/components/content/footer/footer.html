@@ -1,0 +1,25 @@
+<footer class="reinvent-footer" data-sly-use.footer="com.statoil.reinvent.components.wcmuse.Footer" role="contentinfo">
+    <section class="footer-social" data-sly-test="${footer.showSocialLinks}">
+        <h2>${footer.title}</h2>
+        <ul class="social-links" data-sly-list.child="${footer.socialLinks}">
+          <li>
+            <a class="social-icon animate" href="${child.linkUrl}" aria-labelledby="${child.linkTitle}">
+              <span class="fa fa-${child.linkTitle}"><span id="${child.linkTitle}" class="link-description">${child.linkTitle}</span>
+            </a>
+          </li>
+        </ul>
+    </section>
+    <section class="footer-bottom">
+        <ul class="footer-links">
+            <div data-sly-list.child="${footer.links}" data-sly-unwrap>
+                <li><a href="${child.linkUrl}">${child.linkTitle}</a></li>
+            </div>
+        </ul>
+        <ul class="footer-links">
+            <div data-sly-list.child="${footer.linksTwo}" data-sly-unwrap>
+                <li><a href="${child.linkUrl}">${child.linkTitle}</a></li>
+            </div>
+        </ul>
+        <div class="copyright">${footer.copyright}</div>
+    </section>
+</footer>

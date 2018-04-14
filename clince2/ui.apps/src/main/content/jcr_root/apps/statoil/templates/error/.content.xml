@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Error page template for Statoil and affiliate sites"
+    jcr:primaryType="cq:Template"
+    jcr:title="Statoil Site Error Page"
+    allowedPaths="[/content(/.*)?]"
+    ranking="{Long}90">
+    <jcr:content
+        cq:allowedTemplates="[/apps/statoil/templates/error]"
+        cq:designPath="/etc/designs/statoil"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="statoil/components/page/error">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+        <topbanner
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="statoil/components/content/topbanner"/>
+    </jcr:content>
+</jcr:root>

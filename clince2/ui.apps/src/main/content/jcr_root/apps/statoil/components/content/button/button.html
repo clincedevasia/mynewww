@@ -1,0 +1,15 @@
+<sly data-sly-use.button="com.statoil.reinvent.components.wcmuse.Button" data-sly-unwrap> <sly
+	data-sly-use.template="statoil/components/templates/placeholder.html"
+	data-sly-call="${template.placeholder @ isEmpty = !button.title}">
+</sly>
+<div class="component-container ${button.margin}">
+	<div class="button-content ${button.alignment}"
+		data-sly-unwrap="${!button.title || !button.link}">
+		<a data-sly-attribute.href="${button.link}${button.anchor}"
+			data-sly-attribute.class="${button.classList}"
+			data-sly-attribute.target="${button.target}" data-emptytext="Button">${button.title}
+			<span class="button-arrow"></span>
+		</a>
+	</div>
+</div>
+</sly>

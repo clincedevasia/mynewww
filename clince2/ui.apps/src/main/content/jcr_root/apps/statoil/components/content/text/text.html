@@ -1,0 +1,6 @@
+<div data-sly-use.text="text.js" class="component-container ${text.cssClass}" data-emptytext="Text">
+<p
+	data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}"
+	class="${text.cssClass}">${text.text @
+	context=text.context}</p>
+</div>

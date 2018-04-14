@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="no"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <form-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.form-error"
+            sling:message="Skjemaet er ikke korrekt utfylt"/>
+
+    <fullname
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.fullname"
+            sling:message="Ditt navn"/>
+    <fullname-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.fullname-error"
+            sling:message="Vennligst fyll ut ditt navn"/>
+
+    <email
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.email"
+            sling:message="E-post"/>
+
+    <email-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.email-error"
+            sling:message="Vennligst fyll ut din e-post adresse"/>
+
+    <receiver
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.receiver"
+            sling:message="Hvem er det du prøver å nå?"/>
+
+    <category
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category"
+            sling:message="Kategori"/>
+
+    <category-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-error"
+            sling:message="Vennligst velg kategori"/>
+
+    <category-pleaseselect
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-pleaseselect"
+            sling:message="Velg vennligst"/>
+
+    <category-askquestion
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-askquestion"
+            sling:message="Still oss et spørsmål"/>
+
+    <category-reportwebsiteerror
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-reportwebsiteerror"
+            sling:message="Meld fra om feil på nettsiden vår"/>
+
+    <category-contactstaff
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-contactstaff"
+            sling:message="Kontakt en avdeling eller ansatt"/>
+
+    <category-investorrelations
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-investorrelations"
+            sling:message="Investering"/>
+
+    <category-ethics
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-ethics"
+            sling:message="Etikk"/>
+
+    <category-other
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-other"
+            sling:message="Annet"/>
+
+    <message
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.message"
+            sling:message="Hvordan kan vi hjelpe deg?"/>
+
+    <message-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.message-error"
+            sling:message="Vennligst la oss vite hvordan vi kan hjelpe deg"/>
+
+    <sendcopy
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.sendcopy"
+            sling:message="Send en kopi til min e-postadresse"/>
+
+    <submit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit"
+            sling:message="Send skjema"/>
+
+    <submitloading
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit.loading"
+            sling:message="Sender..."/>
+
+    <submitfinished
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit.finished"
+            sling:message="Suksess"/>
+
+    <submitfailed
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit.failed"
+            sling:message="Serverfeil"/>
+
+    <submitsucceeded
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit.succeeded"
+            sling:message="Takk!"/>
+
+</jcr:root>

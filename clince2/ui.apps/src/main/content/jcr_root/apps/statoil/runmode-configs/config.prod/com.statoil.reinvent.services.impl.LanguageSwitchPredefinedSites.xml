@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+	xmlns:jcr="http://www.jcp.org/jcr/1.0" jcr:primaryType="sling:OsgiConfig"
+	getPredefinedSites="[Global;www.statoil.com;/content/statoil,Germany;www.statoil.de;/content/statoil-de,Brazil;www.statoil.com.br;/content/statoil-br,Netherlands;www.statoil.nl;/content/statoil-nl,Techstars;www.techstars.statoil.com;/content/techstars-statoil,Statoilfondene;www.statoilfondene.no;/content/Statoilfondene,Statoil Storage;www.statoilstorage.de;/content/statoilstorage-de]" />

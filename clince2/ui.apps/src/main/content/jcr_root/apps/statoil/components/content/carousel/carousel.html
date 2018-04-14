@@ -1,0 +1,30 @@
+<sly data-sly-use.template="statoil/components/templates/placeholder.html"
+data-sly-use.carousel="com.statoil.reinvent.components.sling.models.Carousel"
+data-sly-call="${template.placeholder @ isEmpty = !carousel.configured, classAppend = 'carousel-placeholder-height'}">
+</sly>
+
+<sly data-sly-test=${carousel.configured}>
+    <div class="slideshow ${properties.spaceBelow}" data-duration="${properties.playSpeed}">
+        <sly data-sly-list = "${carousel.slideProperties}">
+            <div class="placement-${item.contentPlacement} textcolor-${item.textColor} shadow-${item.shadowColor} button-${item.buttonColor}">
+               <img
+                   src="${item.imageRenditions.extraLarge}"
+                   srcset="${item.imageRenditions.extraSmallImage} 100w, ${item.imageRenditions.smallImage} 1024w, ${item.imageRenditions.medium} 1280w, ${item.imageRenditions.large} 1537w, ${item.imageRenditions.extraLarge} 2000w"
+                   sizes="100vw"
+                   data-emptytext="Image"/>
+                   <div class="slide-text">
+                        <div class="slide-title"><h1>${item.slideTitle}</h1></div>
+                        <div class="slide-description">${item.slideDescription}</div>
+                        <sly data-sly-test="${item.buttonText != ''}">
+                            <sly data-sly-test.isPagePathExist="${item.pagePath}">
+                                <a class="btn large list" href="${item.pagePath}.html">${item.buttonText}</a>
+                            </sly>
+                            <sly data-sly-test="${!isPagePathExist}">
+                                <a class="btn large list" href="javascript:void(0)">${item.buttonText}</a>
+                            </sly>
+                        </sly>
+                   </div>
+            </div>
+        </sly>
+    </div>
+</sly>

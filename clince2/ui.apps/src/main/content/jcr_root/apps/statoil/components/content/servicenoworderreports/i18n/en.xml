@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <reports
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.reports"
+            sling:message="Reports"/>
+
+    <reports-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.reports-error"
+            sling:message="Please select a report"/>
+    <annualreport
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.annualreport"
+            sling:message="Annual Report and Form 20-F"/>
+
+    <statutoryreport
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.statutoryreport"
+            sling:message="Årsrapport for norske myndigheter"/>
+
+    <prospectusreport
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.prospectusreport"
+            sling:message="Prospectus"/>
+
+    <downloadfile
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.downloadfile"
+            sling:message="download"/>
+
+    <fullname
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.fullname"
+            sling:message="Your name"/>
+
+    <fullname-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.fullname-error"
+            sling:message="Please enter your name"/>
+
+    <email
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.email"
+            sling:message="E-mail"/>
+
+    <email-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.email-error"
+            sling:message="Please enter your e-mail address"/>
+
+    <company-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.company-error"
+            sling:message="Please enter your company"/>
+
+    <company
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.company"
+            sling:message="Company"/>
+
+    <address-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.address-error"
+            sling:message="Please enter your address"/>
+
+    <address
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.address"
+            sling:message="Address"/>
+
+    <zip-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.zip-error"
+            sling:message="Please enter your zip"/>
+
+    <zip
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.zip"
+            sling:message="Zip"/>
+
+    <city-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.city-error"
+            sling:message="Please enter your city"/>
+
+    <city
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.city"
+            sling:message="City"/>
+
+    <country-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.country-error"
+            sling:message="Please enter your country"/>
+
+    <country
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.country"
+            sling:message="Country"/>
+
+    <sendcopy
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.sendcopy"
+            sling:message="Send a copy of this order to my e-mail"/>
+
+    <submit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit"
+            sling:message="Order printed copies by post"/>
+
+    <submitloading
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit.loading"
+            sling:message="Sending..."/>
+
+    <submitfinished
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit.finished"
+            sling:message="Success"/>
+
+    <submitfailed
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit.failed"
+            sling:message="Server Error"/>
+
+    <submitsucceeded
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit.succeeded"
+            sling:message="Thank You!"/>
+
+</jcr:root>

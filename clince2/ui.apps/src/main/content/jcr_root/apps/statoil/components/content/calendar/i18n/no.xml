@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="no"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <addToCalendar
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="addToCalendar"
+        sling:message="Legg til i kalender"/>
+    <byCountry
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="byCountry"
+        sling:message="Etter land"/>
+    <byType
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="byType"
+        sling:message="Etter type"/>
+    <readMore
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="readMore"
+        sling:message="Les mer"/>
+    <search
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="search"
+        sling:message="Søk"/>
+    <searchLabel
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="searchLabel"
+        sling:message="Søk etter hendelser i kalenderen"/>
+    <timezones jcr:primaryType="nt:folder">
+    	<cest
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="CEST"
+            sling:message="CEST"/>
+        <cet
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="CET"
+            sling:message="CET"/>
+        <utc-canada
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc-7canada"
+            sling:message="UTC -7 Canada"/>
+        <utc-usa-houston
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc-6united-states-houston"
+            sling:message="UTC -6 United States Houston"/>
+        <utc-usa-washington
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc-5united-states-washington-dc"
+            sling:message="UTC -5 United States Washington DC"/>
+        <utc-brazil
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc-3brazil"
+            sling:message="UTC -3 Brasil"/>
+        <utc-uk
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc+0united-kingdom"
+            sling:message="UTC +0 Storbritannia"/>
+        <utc-norge
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc+1norway"
+            sling:message="UTC +1 Norge"/>
+        <utc-angola
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc+1angola-nigeria"
+            sling:message="UTC +1 Angola, Nigeria"/>
+        <utc-tanzania
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc+3tanzania"
+            sling:message="UTC +3 Tanzania"/>
+        <utc-azerbaijan-baku
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc+4azerbaijan-baku"
+            sling:message="UTC +4 Aserbajdsjan, Baku"/>
+        <utc-australia-perth
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc+8australia-perth"
+            sling:message="UTC +8 Australia, Perth"/>
+        <utc-south-korea
+            jcr:primaryType="sling:MessageEntry"
+            sling:key="utc+9south-korea"
+            sling:message="UTC +9 Sør-Korea"/>
+    </timezones>
+</jcr:root>

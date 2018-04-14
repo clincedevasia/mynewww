@@ -1,0 +1,80 @@
+<template data-sly-template.news="${@ renderItem}">
+
+  <section class="list-content ${renderItem.image ? '':'no-image'}">
+
+		<!-- News image -->
+		<div class="item-image">
+      <a href="${renderItem.path}" title="${renderItem.itemName}"  data-sly-test="${renderItem.image}" target="${renderItem.external ? '_blank':''}">
+				<img src="${renderItem.image}"
+					 alt="${renderItem.itemName}" title="${renderItem.itemName}"/>
+			 </a>
+		</div>
+
+		<!-- News item text -->
+		<div class="item-text">
+
+      <!-- Display the news-date above the title on tiles view -->
+      <div data-sly-test="${renderItem.modifiedDateString}" data-sly-unwrap>
+  			<span class="item-date" data-sly-use.mycomp="${'com.statoil.reinvent.utils.DateUtil' @ calendar=renderItem.modifiedDateString, page=currentPage}">${mycomp.getFormattedDate}</span>
+  		</div>
+
+			<a href="${renderItem.path}" title="${renderItem.itemName}" target="${renderItem.external ? '_blank':''}">
+				<h3>${renderItem.itemName}</h3>
+			</a>
+
+			<p class="description">${renderItem.itemDescription}</p>
+
+		</div>
+
+		<!-- News item meta -->
+    <div class="item-meta">
+
+      <div data-sly-test="${renderItem.modifiedDateString}" data-sly-unwrap>
+  			<span class="item-date" data-sly-use.mycomp="${'com.statoil.reinvent.utils.DateUtil' @ calendar=renderItem.modifiedDateString, page=currentPage}">${mycomp.getFormattedDate}</span>
+  		</div>
+
+  		<div class="item-read-more" data-sly-test="${properties.buttonText}">
+  			<a class="btn large list" href="${renderItem.path}" title="${renderItem.itemName}" target="${renderItem.external ? '_blank':''}"><span>${properties.buttonText}</span></a>
+  		</div>
+    </div>
+
+  </section>
+</template>
+
+<template data-sly-template.teaser="${@ renderItem}">
+
+  <section class="list-content ${renderItem.image ? '':'no-image'}">
+
+		<!-- Teaser image -->
+		<div class="item-image">
+
+      <a href="${renderItem.path}" title="${renderItem.itemName}"  data-sly-test="${renderItem.image}" target="${renderItem.external ? '_blank':''}">
+
+				<img src="${renderItem.image}"
+					 alt="${renderItem.itemName}" title="${renderItem.itemName}"/>
+			 </a>
+		</div>
+
+		<!-- Teaser item text -->
+		<div class="item-text">
+
+			<a href="${renderItem.path}" title="${renderItem.itemName}" target="${renderItem.external ? '_blank':''}">
+				<h3>${renderItem.itemName}</h3>
+			</a>
+
+			<p class="description">${renderItem.itemDescription}</p>
+
+		</div>
+
+		<!-- Teaser item meta -->
+    <div class="item-meta">
+
+  		<div class="item-read-more">
+  			<a class="btn large list" href="${renderItem.path}" title="${renderItem.itemName}" target="${renderItem.external ? '_blank':''}"><span>${properties.buttonText}</span></a>
+  		</div>
+    </div>
+
+  </section>
+
+
+</template>

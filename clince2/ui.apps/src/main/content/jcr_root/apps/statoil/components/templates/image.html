@@ -1,0 +1,4 @@
+<template data-sly-template.default="${@ image}">
+    <img src="${image.src_medium}" srcset="${image.src_extrasmall} 360w, ${image.src_small} 768w, ${image.src_large} 1200w" sizes="100vw"
+         class="${image.classList @ join= ' '}" data-emptytext="${image.emptyText}" alt="${image.alt}" title="${image.title}" aria-describedby="${image.ariaDescriptionId}"/>
+</template>

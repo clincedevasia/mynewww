@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="no"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <form-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.form-error"
+            sling:message="Skjemaet er ikke korrekt utfylt"/>
+
+    <contactdetails
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.contactdetails"
+            sling:message="Kontaktopplysninger"/>
+
+    <company-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.company-error"
+            sling:message="Vennligst fyll ut ditt firma"/>
+
+    <company
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.company"
+            sling:message="Firma"/>
+
+    <contactperson-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.contactperson-error"
+            sling:message="Vennligst fyll ut kontaktperson"/>
+
+    <contactperson
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.contactperson"
+            sling:message="Kontaktperson"/>
+
+    <country-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.country-error"
+            sling:message="Vennligst fyll ut lokasjon"/>
+
+    <country
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.country"
+            sling:message="Lokasjon"/>
+
+    <email-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.email-error"
+            sling:message="Vennligst fyll ut en e-post adresse"/>
+
+    <email
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.email"
+            sling:message="E-post"/>
+
+    <telephone-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.telephone-error"
+            sling:message="Vennligst fyll ut et telefonnummer"/>
+
+    <telephone
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.telephone"
+            sling:message="Telefonnummer"/>
+
+    <contactreason
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.contactreason"
+            sling:message="Hovedgrunnen til kontakt med oss"/>
+
+    <category
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.category"
+            sling:message="Vennligst velg ett av følgende"/>
+
+    <category-providecompanyinformation
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.category-providecompanyinformation"
+            sling:message="Ønsker å gi selskapet opplysninger som skal vurderes for fremtidige kontrakter"/>
+
+    <category-contactpersonnel
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.category-contactpersonnel"
+            sling:message="Ønsker å kontakte relevant personell for å presentere ny teknologi, løsninger, ideer osv"/>
+
+    <category-questions
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.category-questions"
+            sling:message="Spørsmål om hvordan å bli en leverandør / forstå Statoil supply chain"/>
+
+    <category-other
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.category-other"
+            sling:message="Annet"/>
+
+    <geolocation
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.geolocation"
+            sling:message="Geografisk lokasjon hvor dere leverer materiell / tjenester"/>
+
+    <geolocation-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.geolocation-error"
+            sling:message="Du må angi minst ett sted hvor dere leverer materiell / tjenester"/>
+
+    <location-worldwide
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-worldwide"
+            sling:message="Globalt"/>
+
+    <location-algeria
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-algeria"
+            sling:message="Algeria"/>
+
+    <location-angola
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-angola"
+            sling:message="Angola"/>
+
+    <location-azerbaijan
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-azerbaijan"
+            sling:message="Azerbaijan"/>
+
+    <location-australia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-australia"
+            sling:message="Australia"/>
+
+    <location-bahamas
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-bahamas"
+            sling:message="Bahamas"/>
+
+    <location-belgium
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-belgium"
+            sling:message="Belgia"/>
+
+    <location-brazil
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-brazil"
+            sling:message="Brasil"/>
+
+    <location-canada
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-canada"
+            sling:message="Canada"/>
+
+    <location-china
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-china"
+            sling:message="Kina"/>
+
+    <location-colombia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-colombia"
+            sling:message="Colombia"/>
+
+    <location-denmark
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-denmark"
+            sling:message="Danmark"/>
+
+    <location-gemany
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-germany"
+            sling:message="Tyskland"/>
+
+    <location-greenland
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-greenland"
+            sling:message="Grønland"/>
+
+    <location-india
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-india"
+            sling:message="India"/>
+
+    <location-indonesia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-indonesia"
+            sling:message="Indonesia"/>
+
+    <location-ireland
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-ireland"
+            sling:message="Irland"/>
+
+    <location-libya
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-libya"
+            sling:message="Libya"/>
+
+    <location-mexico
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-mexico"
+            sling:message="Mexico"/>
+
+    <location-mozambique
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-mozambique"
+            sling:message="Mozambique"/>
+
+    <location-myanmar
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-myanmar"
+            sling:message="Myanmar"/>
+
+    <location-netherlands
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-netherlands"
+            sling:message="Nederland"/>
+
+    <location-newzealand
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-newzealand"
+            sling:message="New Zealand"/>
+
+    <location-nigeria
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-nigeria"
+            sling:message="Nigeria"/>
+
+    <location-nicaragua
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-nicaragua"
+            sling:message="Nicaragua"/>
+
+    <location-norway
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-norway"
+            sling:message="Norge"/>
+
+    <location-russia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-russia"
+            sling:message="Russland"/>
+
+    <location-singapore
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-singapore"
+            sling:message="Singapore"/>
+
+    <location-southafrica
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-southafrica"
+            sling:message="Sør-Africa"/>
+
+    <location-southkorea
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-southkorea"
+            sling:message="Sør-Korea"/>
+
+    <location-suriname
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-suriname"
+            sling:message="Surinam"/>
+
+    <location-tanzania
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-tanzania"
+            sling:message="Tanzania"/>
+
+    <location-turkey
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-turkey"
+            sling:message="Tyrkia"/>
+
+    <location-unitedarabemirates
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-unitedarabemirates"
+            sling:message="De Forente Arabiske Emirater"/>
+
+    <location-unitedkingdom
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-unitedkingdom"
+            sling:message="Storbritannia"/>
+
+    <location-unitestates
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-unitedstates"
+            sling:message="USA"/>
+
+    <location-uruguay
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-uruguay"
+            sling:message="Uruguay"/>
+
+    <location-venezuela
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-venezuela"
+            sling:message="Venezuela"/>
+
+    <location-other
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.location-other"
+            sling:message="Annet"/>
+
+    <segment
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.segment"
+            sling:message="Velg det mest relevante segmentet"/>
+
+    <segment-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.segment"
+            sling:message="Du kan kun velge ett segment"/>
+
+    <procurementsupport
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.procurementsupport"
+            sling:message="Innkjøp forretningsstøtte"/>
+
+    <equipmentsafety
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.equipmentsafety"
+            sling:message="Utstyr sikkerhet og kjemikalier"/>
+
+    <logistics
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.logistics"
+            sling:message="Logistikk i vedlikehold og drift"/>
+
+    <drilling
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.drilling"
+            sling:message="Boretjenester"/>
+
+    <completion
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.completion"
+            sling:message="Ferdigstilling"/>
+
+    <intervention
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.intervention"
+            sling:message="Innblanding"/>
+
+    <xmt
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.xmt"
+            sling:message="XMT og OCTG"/>
+
+    <drillingfixed
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.drillingfixed"
+            sling:message="Fast boring"/>
+
+    <cement
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.cement"
+            sling:message="Sement, væsker og avfall"/>
+
+    <rig
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.rig"
+            sling:message="Rigg"/>
+
+    <rov
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.rov"
+            sling:message="Rov, flotell, LWI, fortøyning"/>
+
+    <geoscience
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.geoscience"
+            sling:message="Geofaglige tjenester: seismikk"/>
+
+    <research-1
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.research-1"
+            sling:message="Forskning og Teknologi: Subsurface teknologi / leteteknologi / LAB og testanlegg"/>
+
+    <research-2
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.research-2"
+            sling:message="Forskning og Teknologi: Facility Teknologi / Fremtidige verdikjeder"/>
+
+    <research-3
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.research-3"
+            sling:message="Forskning og Teknologi: Prosjekter og teknologisamarbeid"/>
+
+    <drillingsupply
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.drillingsupply"
+            sling:message="Boring forsyning og logistikk: logistikk i D / W drift"/>
+
+    <equipment
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.equipment"
+            sling:message="Utstyr"/>
+
+    <subseamarine
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.subseamarine"
+            sling:message="Undervanns og marin teknologi"/>
+
+    <transportation
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.transportation"
+            sling:message="Transport og installasjon"/>
+
+    <linepipe
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.linepipe"
+            sling:message="Linepipe / Coating"/>
+
+    <subseavalves
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.subseavalves"
+            sling:message="Undervannsventiler"/>
+
+    <studies
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.studies"
+            sling:message="Studier"/>
+
+    <valves
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.valves"
+            sling:message="Ventiler"/>
+
+    <cranes
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.cranes"
+            sling:message="Kran og løft"/>
+
+    <rotatingequipment
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.rotatingequipment"
+            sling:message="Roterende utstyr"/>
+
+    <electroautomation
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.electroautomation"
+            sling:message="Elektro og automatsjon"/>
+
+    <businessupport
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.businessupport"
+            sling:message="Foretningsstøtte"/>
+
+    <omm
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.omm"
+            sling:message="OMM"/>
+
+    <subsea
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.subsea"
+            sling:message="Undervannsteknologi"/>
+
+    <keywordsheader
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.keywordsheader"
+            sling:message="Legg til søkbare nøkkelord for omfanget av arbeidet (valgfritt)"/>
+
+    <keywords
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.keywords"
+            sling:message="Legg søkbare nøkkelord for arbeidsomfanget i tekstfeltet"/>
+
+
+    <commentsheader
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.commentsheader"
+            sling:message="Kommentarer og støttedokumenter (valgfritt)"/>
+
+    <supportingdocuments
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.supportingdocuments"
+            sling:message="Huk av denne boksen dersom du ønsker å sende følgedokumenter, så vil vi ta kontakt med deg"/>
+
+    <submit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsupplychain.submit"
+            sling:message="Send skjema"/>
+
+</jcr:root>

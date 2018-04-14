@@ -1,0 +1,39 @@
+<sly 
+	data-sly-use.magazineList="com.statoil.reinvent.components.wcmuse.MagazineListComponent"
+	data-sly-use.emptyRenderer="emptylist.html"
+    data-sly-use.magazineViewTemplate="views/magazinelistview.html"
+    data-sly-use.authoringUtils="/libs/wcm/foundation/components/utils/AuthoringUtils.js">
+
+    <sly data-sly-call="${emptyRenderer.emptylisttemplate @list=magazineList.filteredList, authUtils = authoringUtils}" />
+
+    <div class="magazine-list-component component-container ${properties.spaceBelow}"
+		 id="${magazineList.componentNodeName}"
+    	 data-nodepath="${magazineList.componentNodePath}">
+
+        <!--/* Tags container */-->
+        <div class="button-list">
+
+            <sly data-sly-test="${properties.hideTags != 'true'}" data-sly-list.tag="${magazineList.allTags}">
+                <button class="magazine-tag-filter-btn" data-tagname="${tag.tagId}" data-tagtitle="${tag.tagTitle}">${tag.tagTitle}</button>
+            </sly>
+        </div>
+
+		<!--/* Result count text */-->
+        <p class="result-count-text">${'magazine.list.showing.text' @ i18n, locale=magazineList.locale} <span class="result-count"></span> ${'magazine.list.storiesfor.text' @ i18n, locale=magazineList.locale} <span class="selected-tag-name"></span></p>
+
+		<!--/* MagazineViewPageList partial */-->
+        <sly data-sly-test="${properties.displayAs == 'MagazineViewPageList'}">
+            <sly data-sly-call="${magazineViewTemplate.magazineViewPageList @list = magazineList}"></sly>
+        </sly>
+
+		<!--/* More options logic */-->
+        <sly data-sly-test="${properties.hideMoreOption != 'true'}"><!--/* This is used by authors to hide the more option */ -->
+            <sly data-sly-test="${magazineList.showMoreOption}"><!--/* This is used to check is there are more results than the limit set */ -->
+                <div class="magazine-more-results">
+                    <button class="magazine-more-results-btn">${'magazine.list.more' @ i18n, locale=magazineList.locale}</button>
+                </div>
+            </sly>
+        </sly>
+    </div>
+
+</sly>

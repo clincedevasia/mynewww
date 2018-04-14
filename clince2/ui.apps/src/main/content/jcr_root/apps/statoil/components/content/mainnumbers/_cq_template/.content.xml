@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    number="6.44"
+    post="Nok"
+    pre="P/E"
+    sub="Price/earnings ratio">
+    <pre
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="statoil/components/content/plaintext"
+        text="pre"/>
+    <number
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="statoil/components/content/plaintext"
+        text="100"/>
+    <post
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="statoil/components/content/plaintext"
+        text="post"/>
+    <sub
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="statoil/components/content/plaintext"
+        text="subtext here"/>
+    <footertext
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="statoil/components/content/plaintext"
+        text="footertext here"/>
+</jcr:root>

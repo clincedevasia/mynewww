@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    cache.serve-authenticated="{Boolean}true"
+    cache.ttl="{Long}0"
+    enabled="{Boolean}true"
+    error-page.extension="html"
+    error-page.fallback-name="500"
+    error-page.system-path="/content/statoil/en/errors/404"
+    paths="[/content/statoil/:/content/statoil/en/errors,/content/statoil/en:/content/statoil/en/errors,/content/statoil/no:/content/statoil/no/errors,/content/statoil-de/de:/content/statoil-de/de/errors,/content/statoil-br/pt:/content/statoil-br/pt/errors,/content/Statoilfondene/no:/content/Statoilfondene/no/errors,/content/statoil-nl/nl:/content/statoil-nl/nl/errors,/content/empirewind/en:/content/empirewind/en/errors,/content/statoilstorage-de/en:/content/statoilstorage-de/en/errors,/content/statoilstorage-de/de:/content/statoilstorage-de/de/errors]"/>

@@ -1,0 +1,25 @@
+<template data-sly-template.download="${@ renderItem, language}">
+	<section class="list-content ${renderItem.image ? '':'no-image'}">
+		<div class="item-image" data-sly-test="${renderItem.image}">
+			<a href="${renderItem.path}" title="${renderItem.itemName}">
+				<img src="${renderItem.image}"
+					 alt="${renderItem.itemName}" title="${renderItem.itemName}"/>
+			</a>
+		</div>
+		<div class="item-text">
+			<a href="${renderItem.path}" title="${renderItem.itemName}">
+				<h3>${renderItem.itemName}</h3>
+			</a>
+		</div>
+		<div class="item-meta">
+			<div class="item-read-more">
+				<a class="btn large list download" href="${renderItem.path}" title="${renderItem.itemName}" target="${renderItem.external ? '_blank':''}">
+					<span class="button-text">${'list.download' @ i18n, locale=language}</span>
+					<span class="si si-${renderItem.extension}"></span>
+					<span class="extension">${renderItem.extension}</span>
+					<span class="filesize">${renderItem.filesize}</span>
+				</a>
+			</div>
+		</div>
+	</section>
+</template>

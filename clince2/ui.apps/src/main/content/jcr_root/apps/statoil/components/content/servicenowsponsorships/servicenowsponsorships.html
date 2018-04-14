@@ -1,0 +1,137 @@
+<form id="Sponsorships" class="statoil-form" method="post" data-sly-use.servicenowsponsorships="com.statoil.reinvent.components.wcmuse.ServiceNowSponsorships" data-abide="ajax" novalidate>
+
+  <h2 data-sly-test="${properties.heading}">${properties.heading}</h2>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsponsorships.organisation-error' @ i18n, locale=servicenowsponsorships.language}</span>
+    </span>
+
+    <label for="snSponsorships-organisation">${'servicenowsponsorships.organisation' @ i18n, locale=servicenowsponsorships.language} *</label>
+    <input id="snSponsorships-organisation" type="text" name="organisation" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsponsorships.contactperson-error' @ i18n, locale=servicenowsponsorships.language}</span>
+    </span>
+
+    <label for="snSponsorships-contactPerson">${'servicenowsponsorships.contactperson' @ i18n, locale=servicenowsponsorships.language} *</label>
+    <input id="snSponsorships-contactPerson" type="text" name="contactPerson" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsponsorships.phonenumber-error' @ i18n, locale=servicenowsponsorships.language}</span>
+    </span>
+
+    <label for="snSponsorships-phoneNumber">${'servicenowsponsorships.phonenumber' @ i18n, locale=servicenowsponsorships.language} *</label>
+    <input id="snSponsorships-phoneNumber" type="tel" name="phoneNumber" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsponsorships.email-error' @ i18n, locale=servicenowsponsorships.language}</span>
+    </span>
+
+    <label for="snSponsorships-email">${'servicenowsponsorships.email' @ i18n, locale=servicenowsponsorships.language} *</label>
+    <input id="snSponsorships-email" type="email" name="email" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsponsorships.category-error' @ i18n, locale=servicenowsponsorships.language}</span>
+    </span>
+
+    <label for="snSponsorships-category">${'servicenowsponsorships.category' @ i18n, locale=servicenowsponsorships.language} *</label>
+    <select id="snSponsorships-category" name="category" data-validator="select_required">
+        <option value="">${'servicenowsponsorships.categorytype-pleaseselect' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="scienceEducation">${'servicenowsponsorships.categorytype-scienceeducation' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="sports">${'servicenowsponsorships.categorytype-sports' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="culture">${'servicenowsponsorships.categorytype-culture' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="disciplinaryConferences">${'servicenowsponsorships.categorytype-disciplinaryconferences' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="donation">${'servicenowsponsorships.categorytype-donation' @ i18n, locale=servicenowsponsorships.language}</option>
+    </select>
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsponsorships.location-error' @ i18n, locale=servicenowsponsorships.language}</span>
+    </span>
+
+    <label for="snSponsorships-location">${'servicenowsponsorships.location' @ i18n, locale=servicenowsponsorships.language} *</label>
+    <select id="snSponsorships-location" name="location" data-validator="select_required">
+        <option value="">${'servicenowsponsorships.location-pleaseselect' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="algeria">${'servicenowsponsorships.location-algeria' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="angola">${'servicenowsponsorships.location-angola' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="azerbaijan">${'servicenowsponsorships.location-azerbaijan' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="australia">${'servicenowsponsorships.location-australia' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="bahamas">${'servicenowsponsorships.location-bahamas' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="belgium">${'servicenowsponsorships.location-belgium' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="brazil">${'servicenowsponsorships.location-brazil' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="canada">${'servicenowsponsorships.location-canada' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="china">${'servicenowsponsorships.location-china' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="colombia">${'servicenowsponsorships.location-colombia' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="denmark">${'servicenowsponsorships.location-denmark' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="germany">${'servicenowsponsorships.location-germany' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="greenland">${'servicenowsponsorships.location-greenland' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="india">${'servicenowsponsorships.location-india' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="indonesia">${'servicenowsponsorships.location-indonesia' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="ireland">${'servicenowsponsorships.location-ireland' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="libya">${'servicenowsponsorships.location-libya' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="mexico">${'servicenowsponsorships.location-mexico' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="mozambique">${'servicenowsponsorships.location-mozambique' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="mynmar">${'servicenowsponsorships.location-myanmar' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="thenederlands">${'servicenowsponsorships.location-thenederlands' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="newzealand">${'servicenowsponsorships.location-newzealand' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="nigeria">${'servicenowsponsorships.location-nigeria' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="nicaragua">${'servicenowsponsorships.location-nicaragua' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="norway-Bergen">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Bergen</option>
+        <option value="norway-Hammerfest">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Hammerfest</option>
+        <option value="norway-Harstad">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Harstad</option>
+        <option value="norway-Kårstø">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Kårstø</option>
+        <option value="norway-Mongstad">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Mongstad</option>
+        <option value="norway-Oslo">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Oslo</option>
+        <option value="norway-Porsgrunn">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Porsgrunn</option>
+        <option value="norway-Stavanger">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Stavanger</option>
+        <option value="norway-Stjørdal">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Stjørdal</option>
+        <option value="norway-Sture & Kollsnes">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Sture &amp; Kollsnes</option>
+        <option value="norway-Tjeldbergodden">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Tjeldbergodden</option>
+        <option value="norway-Trondheim">${'servicenowsponsorships.location-norway' @ i18n, locale=servicenowsponsorships.language} - Trondheim</option>
+        <option value="singapore">${'servicenowsponsorships.location-singapore' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="southafrica">${'servicenowsponsorships.location-southafrica' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="southkorea">${'servicenowsponsorships.location-southkorea' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="suriname">${'servicenowsponsorships.location-suriname' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="tanzania">${'servicenowsponsorships.location-tanzania' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="turkey">${'servicenowsponsorships.location-turkey' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="unitedarabemirates">${'servicenowsponsorships.location-unitedarabemirates' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="unitedkingdom">${'servicenowsponsorships.location-unitedkingdom' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="unitedstates">${'servicenowsponsorships.location-unitedstates' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="uruguay">${'servicenowsponsorships.location-uruguay' @ i18n, locale=servicenowsponsorships.language}</option>
+        <option value="venezuela">${'servicenowsponsorships.location-venezuela' @ i18n, locale=servicenowsponsorships.language}</option>
+    </select>
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsponsorships.application-error' @ i18n, locale=servicenowsponsorships.language}</span>
+    </span>
+
+    <label for="snSponsorships-application">${'servicenowsponsorships.application' @ i18n, locale=servicenowsponsorships.language} *</label>
+    <textarea id="snSponsorships-application" name="application" rows="8" cols="50" maxlength="3400" required></textarea>
+  </div>
+
+  <p>${'servicenowsponsorships.supportingdocuments' @ i18n, locale=servicenowsponsorships.language}</p>
+  <sly data-sly-use.recaptcha="../../templates/recaptcha.html" data-sly-call="${recaptcha.invisibleReCaptcha @ callBack='onSponsorshipSubmit', recaptchaId='Sponsorships-recaptcha'}"></sly>
+  <div class="form-submit">
+    <button id="snSponsorships-submit" class="btn large magazine progress-button" type="submit" data-loading="${'servicenowsponsorships.submit.loading' @ i18n, locale=servicenowsponsorships.language}" data-finished="${'servicenowsponsorships.submit.finished' @ i18n, locale=servicenowsponsorships.language}" data-failed="${'servicenowsponsorships.submit.failed' @ i18n, locale=sservicenowsponsorships.language}" data-succeeded="${'servicenowsponsorships.submit.succeeded' @ i18n, locale=servicenowsponsorships.language}">${'servicenowsponsorships.submit' @ i18n, locale=servicenowsponsorships.language}</button>
+  </div>
+
+</form>

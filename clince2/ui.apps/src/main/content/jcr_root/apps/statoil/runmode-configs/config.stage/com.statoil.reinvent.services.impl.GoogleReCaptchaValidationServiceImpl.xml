@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    google.recaptcha.api.request.url="https://www.google.com/recaptcha/api/siteverify"
+    google.recaptcha.client.secret="6LdcCyUUAAAAAMhNj8gNcXtg6Iwo1WtxQpSQ6GO9"
+    google.recaptcha.server.secret="6LdcCyUUAAAAAMM3QqOarUfEJUQUvFK9-0RwKwp5"/>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <title
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="title"
+            sling:message="Search"/>
+    <search
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="search"
+            sling:message="Search here"/>
+    <searchlabel
+        jcr:primaryType="sling:MessageEntry"
+        jcr:mixinTypes="[sling:Message]"
+        sling:key="searchlabel"
+        sling:message="Type to search"/>
+    <searchlabelmobile
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="searchlabelmobile"
+            sling:message="Press enter to search"/>
+    <searchresults
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="searchresults"
+            sling:message="\{\} Hits"/>
+    <emptysearch
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="search.emptysearch"
+            sling:message="No hits"/>
+    <hits
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="hits"
+            sling:message="\{\} of \{\}"/>
+    <showall
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="showall"
+            sling:message="Show all"/>
+    <showless
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="showless"
+            sling:message="Show less"/>
+    <site
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="site"
+            sling:message="Topics"/>
+    <news
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="news"
+            sling:message="News"/>
+</jcr:root>

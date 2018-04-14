@@ -1,0 +1,4 @@
+<div data-sly-use.text="factbox.js" class="component-container ${text.cssClass} ${text.highlight}" data-emptytext="Factbox">
+	<h4 data-sly-test="${text.title}">${text.title}</h4>
+	<p data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}" class="${text.cssClass}">${text.text @ context=text.context}</p>
+</div>

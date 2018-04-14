@@ -1,0 +1,13 @@
+<div data-sly-unwrap="${wcmmode.edit}" class="cq-dd-pages"
+     data-sly-use.listComponent="com.statoil.reinvent.components.wcmuse.DownloadList"
+     data-sly-use.emptyRenderer="emptylist.html"
+     data-sly-use.itemTemplate="listitem.html">
+    <div data-sly-call="${emptyRenderer.emptylisttemplate @ list=listComponent.list}" data-sly-unwrap></div>
+
+    <div class="component-container ${listComponent.space}">
+        <h2 data-sly-test="${listComponent.title}">${listComponent.title}</h2>
+        <ul data-sly-list.listItem="${listComponent.list}" class="list-container">
+            <li data-sly-call="${itemTemplate['download'] @ renderItem=listItem, language=listComponent.language}" class="list-item download"></li>
+        </ul>
+    </div>
+</div>

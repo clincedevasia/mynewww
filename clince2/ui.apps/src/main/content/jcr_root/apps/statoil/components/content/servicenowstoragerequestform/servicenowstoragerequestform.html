@@ -1,0 +1,158 @@
+<form id="StorageRequest" class="statoil-form" method="post"
+	data-sly-use.servicenowBaseComponent="com.statoil.reinvent.components.wcmuse.ServiceNowBaseComponent"
+	data-sly-test.currentLanguage="${servicenowBaseComponent.language}"
+	data-abide="ajax" novalidate>
+	<h2 data-sly-test="${properties.heading}">${properties.heading}</h2>
+	<!-- Contact person -->
+	<div class="form-input">
+		<span class="form-error">
+			<span
+			class="fa fa-exclamation-circle" aria-hidden="true"></span>
+			<span
+			class="error-message">${'servicenowstoragerequestform.contactperson-error'
+				@ i18n, locale=currentLanguage}</span>
+		</span>
+		<label for="snStorageRequest-contactPerson">${'servicenowstoragerequestform.contactperson'
+			@ i18n, locale=currentLanguage} *</label>
+		<input
+			id="snStorageRequest-contactPerson" type="text" name="contactPerson"
+			required />
+	</div>
+	<!-- Company -->
+	<div class="form-input">
+    	<span class="form-error">
+			<span
+			class="fa fa-exclamation-circle" aria-hidden="true"></span>
+			<span
+			class="error-message">${'servicenowstoragerequestform.company-error'
+				@ i18n, locale=currentLanguage}</span>
+		</span>
+		<label for="snStorageRequest-company">${'servicenowstoragerequestform.company'
+			@ i18n, locale=currentLanguage} *</label>
+		<input
+			id="snStorageRequest-company" type="text" name="company" required />
+	</div>
+	<!-- E-mail adress -->
+	<div class="form-input">
+		<span class="form-error">
+			<span
+			class="fa fa-exclamation-circle" aria-hidden="true"></span>
+			<span
+			class="error-message">${'servicenowstoragerequestform.email-error'
+				@ i18n, locale=currentLanguage}</span>
+		</span>
+		<label for="snStorageRequest-email">${'servicenowstoragerequestform.email'
+			@ i18n, locale=currentLanguage} *</label>
+		<input
+			id="snStorageRequest-email" type="email" name="email" required />
+	</div>
+	<!-- Telephone number -->
+	<div class="form-input">
+		<span class="form-error">
+			<span
+			class="fa fa-exclamation-circle" aria-hidden="true"></span>
+			<span
+			class="error-message">${'servicenowstoragerequestform.phone-error'
+				@ i18n, locale=currentLanguage}</span>
+		</span>
+		<label for="snStorageRequest-phone">${'servicenowstoragerequestform.phone'
+			@ i18n, locale=currentLanguage} *</label>
+		<input
+			id="snStorageRequest-phone" type="tel" name="phone"
+			pattern="\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*" required />
+	</div>
+	<!-- Street name and adress -->
+	<div class="form-input">
+		<label for="snStorageRequest-street">${'servicenowstoragerequestform.street'
+			@ i18n, locale=currentLanguage}</label>
+		<input
+			id="snStorageRequest-street" type="text" name="street" />
+	</div>
+	<!-- Postcode -->
+	<div class="form-input">
+		<label for="snStorageRequest-postcode">${'servicenowstoragerequestform.postcode'
+			@ i18n, locale=currentLanguage}</label>
+		<input
+			id="snStorageRequest-postcode" type="number" name="postcode" />
+	</div>
+	<!-- Town -->
+	<div class="form-input">
+		<label for="snStorageRequest-town">${'servicenowstoragerequestform.town'
+			@ i18n, locale=currentLanguage}</label>
+		<input
+			id="snStorageRequest-town" type="text" name="town" />
+	</div>
+	<!-- Transporter -->
+	<div class="form-input">
+		<label for="snStorageRequest-transporter">${'servicenowstoragerequestform.transporter'
+			@ i18n, locale=currentLanguage}</label>
+		<input
+			id="snStorageRequest-transporter" type="text" name="transporter" />
+	</div>
+	<!-- Volume of working gas in cubic meter-->
+	<div class="form-input">
+		<label for="snStorageRequest-volume">${'servicenowstoragerequestform.volume'
+			@ i18n, locale=currentLanguage}</label>
+		<input
+			id="snStorageRequest-volume" type="number" min="0" max="200000000"
+			name="volume"
+			placeholder="${'servicenowstoragerequestform.volumeplaceholder' @ i18n, locale=currentLanguage}" />
+	</div>
+	<!-- Entry capacity in cubic meter per hour -->
+	<div class="form-input">
+		<label for="snStorageRequest-entryCapacity">${'servicenowstoragerequestform.entrycapacity'
+			@ i18n, locale=currentLanguage}</label>
+		<input
+			id="snStorageRequest-entryCapacity" type="number" min="0"
+			max="770000" name="entryCapacity"
+			placeholder="${'servicenowstoragerequestform.entrycapacityplaceholder' @ i18n, locale=currentLanguage}" />
+	</div>
+	<!-- Exit capacity in cubic meter per hour -->
+	<div class="form-input">
+		<label for="snStorageRequest-exitCapacity">${'servicenowstoragerequestform.exitcapacity'
+			@ i18n, locale=currentLanguage}</label>
+		<input
+			id="snStorageRequest-exitCapacity" type="number" min="0"
+			max="1320000" name="exitCapacity"
+			placeholder="${'servicenowstoragerequestform.exitcapacityplaceholder' @ i18n, locale=currentLanguage}" />
+	</div>
+	<!-- Timespan -->
+	<div class="form-input">
+		<p class="visual-label">${'servicenowstoragerequestform.timespan'
+			@ i18n, locale=currentLanguage}</p>
+		<div class="timespan-wrapper">
+			<div class="form-input">
+				<label for="snStorageRequest-dateFrom">
+					<span
+					class="visually-hidden">${'servicenowstoragerequestform.timespan'
+						@ i18n, locale=currentLanguage} </span>
+					${'servicenowstoragerequestform.datefrom' @ i18n,
+					locale=currentLanguage}
+				
+				</label>
+				<input id="snStorageRequest-dateFrom" type="text" name="dateFrom" />
+			</div>
+			<div class="form-input">
+				<label for="snStorageRequest-dateTo">
+					<span
+					class="visually-hidden">${'servicenowstoragerequestform.timespan'
+						@ i18n, locale=currentLanguage} </span>
+					${'servicenowstoragerequestform.dateto' @ i18n,
+					locale=currentLanguage}
+				
+				</label>
+				<input id="snStorageRequest-dateTo" type="text" name="dateTo" />
+			</div>
+		</div>
+	</div>
+	<sly data-sly-use.recaptcha="../../templates/recaptcha.html" data-sly-call="${recaptcha.invisibleReCaptcha @ callBack='onStorageRequestSubmit', recaptchaId='StorageRequest-recaptcha'}"></sly>
+	<!-- Submit button -->
+	<div class="form-submit">
+		<button id="snStorageRequest-submit" class="btn large progress-button"
+			data-loading="${'servicenowstoragerequestform.submit.loading' @ i18n, locale=currentLanguage}"
+			data-finished="${'servicenowstoragerequestform.submit.finished' @ i18n, locale=currentLanguage}"
+			data-failed="${'servicenowstoragerequestform.submit.failed' @ i18n, locale=currentLanguage}"
+			data-succeeded="${'servicenowstoragerequestform.submit.succeeded' @ i18n, locale=currentLanguage}">${'servicenowstoragerequestform.submit'
+			@ i18n, locale=currentLanguage}</button>
+	</div>
+</form>

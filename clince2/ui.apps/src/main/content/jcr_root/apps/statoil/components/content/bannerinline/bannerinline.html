@@ -1,0 +1,41 @@
+<div class="component-container ${image.space}" data-sly-use.image="Image">
+	<div class="bannerinline-container">
+		<a data-sly-use.image_text="Text" href="${image_text.link}" data-sly-unwrap="${!image_text.link}" class="${image_text.panelPage ? 'panel' : ''}">
+			<section data-sly-use.tags="Tags" data-groups="${tags.commaSeperatedTags}" class="banner-section filterable">
+				<figure class="banner${image.angle}${image.useButtonClass}">
+					<img src="${image.src_extralarge}"
+						 srcset="${image.src_extrasmall} 100w, ${image.src_small} 768w, ${image.src_medium} 1024w, ${image.src_large} 1537w,${image.src_extralarge} 2000w"
+						 sizes="100vw"
+						 alt="${image.title}"
+						 title="${image.title}"
+						 class="${image.classList}"
+						 data-emptytext="Image"
+						 data-sly-use.image_text="Text"
+						 alt="${image.alternateText || image_text.quote || image_text.title}"
+						 title="${ image_text.quote || image_text.title }"
+					/>
+					<div class="banner-content ${image.alignContent}" data-sly-use.image_text="Text">
+
+						<div class="banner-content-wrapper">
+							<figcaption data-sly-test="${properties.jcr:copyright}" class="figure-module_copyright">
+								${properties.jcr:copyright}
+							</figcaption>
+							<figcaption class="banner-text" data-sly-test="${image_text.showTitles==true}">
+									<span data-sly-test="${image_text.subtitle}" class="tagline ${image.shadow} ${image.color}">${image_text.subtitle}</span>
+									<h2 class="${image.shadow} ${image.color}" data-sly-test="${image_text.title}">${image_text.title}</h2>
+							</figcaption>
+							<figcaption class="banner-text" data-sly-test="${image_text.showTitlesInverse==true}">
+									<h2 class="${image.shadow} ${image.color}": data-sly-test="${image_text.title}">${image_text.title}</h2>
+									<span data-sly-test="${image_text.subtitle}" class="tagline ${image.shadow} ${image.color}">${image_text.subtitle}</span>
+							</figcaption>
+							<div class="banner-button-inside" data-sly-test="${image.useButton}">
+								<div data-sly-resource="${'button' @ resourceType='statoil/components/content/button'}" data-sly-unwrap></div>
+							</div>
+
+						</div>
+					</div>
+				</figure>
+			</section>
+		</a>
+	</div>
+</div>

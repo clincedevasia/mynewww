@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="no"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <form-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.form-error"
+            sling:message="Skjemaet er ikke korrekt utfylt"/>
+
+    <proposedcandidate-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.proposedcandidate-error"
+            sling:message="Vennligst fyll ut navnet på kandidatforslaget"/>
+
+    <proposedcandidate
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.proposedcandidate"
+            sling:message="Kandidatforslag (fullt navn)"/>
+
+    <justification-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.justification-error"
+            sling:message="Vennligst fyll ut din begrunnelse"/>
+
+    <justification
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.justification"
+            sling:message="Begrunnelse"/>
+
+    <sectiondivider
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.sectiondivider"
+            sling:message="Forslag inngitt av"/>
+
+    <fullname-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.fullname-error"
+            sling:message="Vennligst fyll ut fullt navn"/>
+
+    <fullname
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.fullname"
+            sling:message="Fullt navn"/>
+
+    <email-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.email-error"
+            sling:message="Vennligst fyll ut din e-post adresse"/>
+
+    <email
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.email"
+            sling:message="E-post"/>
+
+    <shareholding-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.shareholding-error"
+            sling:message="Vennligst fyll ut aksjebeholdning i Statoil ASA"/>
+
+    <shareholding
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.shareholding"
+            sling:message="Aksjebeholdning i Statoil ASA"/>
+
+    <sendcopy
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.sendcopy"
+            sling:message="Send en kopi av denne meldingen til min e-post"/>
+
+    <submit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.submit"
+            sling:message="Send forslag"/>
+
+</jcr:root>

@@ -1,0 +1,62 @@
+<sly data-sly-use.topnav="com.statoil.reinvent.components.wcmuse.TopNav" data-sly-use.logoConfig="com.statoil.reinvent.components.wcmuse.PageComponentLogoConfiguration"  >
+  <div class="search-btn-wrapper">
+    <div>
+      <button data-sly-test="${!topnav.DisableSearch}" id="navigation-fixed_search" class="animate si si-search searchtoggle" href="${topnav.searchUrl}" title="Open the search function">search button</button>
+      <button data-sly-test="${!topnav.DisableLanguage}" id="navigation-fixed_language" class="animate si si-location languagetoggle" href="#modal-languages" title="Open the language switch" data-lang="${topnav.language}">language button</button>
+    </div>
+  </div>
+
+  <nav class="main-navigation" role="navigation">
+    <div class="navigation-header">
+      <div data-sly-test="${topnav.visibleItems}" class="menu-button fa fa-bars animate">menu button</div>
+      <div class="expand-menu-button"><span class="fa fa-angle-right"></span></div>
+      <div class="search-and-language-wrapper">
+        <a data-sly-test="${!topnav.DisableSearch}" class="search-button si si-search animate" href="${topnav.searchUrl}" title="Go to the search page">search button</a>
+        <a data-sly-test="${!topnav.DisableLanguage}" class="language-button si si-location animate" href="${topnav.languageUrl}" title="Go to the language selection page" data-lang="${topnav.language}">language button</a>
+      </div>
+      <sly data-sly-test="${!logoconfig.noLogo}">
+	      <a href="${topNav.home}">
+	          <img class="default ${logoconfig.logoImageClasses}" src="${logoconfig.logoPath}" alt="Statoil logo">
+	          <img class="medium" src="${logoconfig.miniLogoPath}" alt="Statoil logo">
+	      </a>
+      </sly>
+    </div>
+    <ul class="navigation-list" data-sly-list.child="${topNav.rootPageChildren}">
+      <li class="main-menu-list-item ${child.toolsPage ? 'partner' : ''} ${child.path == currentPage.path || child.path == currentPage.parent.path ? 'current-page' : ''}">
+        <div class="navigation-list-item${child.listChildren ? '' : ' no-subtree'}">
+            <a class="navigation-list-icon" href="${child.path}.html" tabindex="-1" aria-hidden="true">
+              <span class="icon-link-text">${child.path}</span>
+              <span class="statoil-icon si si-${child.iconPath}" data-sly-test="${child.iconPath}"></span>
+            </a>
+            <a class="navigation-list-link" href="${child.path}.html">
+              <span class="link-text">${child.title}</span>
+            </a>
+            <span class="navigation-list-arrow" data-sly-test="${child.hasChildren}">
+              <button aria-label="${child.title} submenu closed" data-label="${child.title}" class="icon fa fa-angle-right" title="Click to toggle the submenu"></button>
+            </span>
+        </div>
+        <ul class="navigation-list-subtree ${child.path == currentPage.parent.path ? 'selected-subtree':''}" data-sly-test="${child.listChildren}">
+          <li>
+            <div class="navigation-list-item">
+              <a class="navigation-list-link sublink header" href="${child.path}.html">
+                <span class="link-text">${child.title}</span>
+              </a>
+              <a class="navigation-list-back">
+                <span class="icon fa fa-angle-left" >icon</span>
+              </a>
+            </div>
+          </li>
+          <sly data-sly-list.leaf="${child.listChildren}" data-sly-unwrap>
+            <li data-sly-test="${!leaf.hideInNav}" class="${leaf.path == currentPage.path ? 'current-page' : ''}">
+              <div class="navigation-list-item">
+                <a class="navigation-list-link sublink" href="${leaf.path}.html">
+                  <span class="link-text">${leaf.title}</span>
+                </a>
+              </div>
+            </li>
+          </sly>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</sly>

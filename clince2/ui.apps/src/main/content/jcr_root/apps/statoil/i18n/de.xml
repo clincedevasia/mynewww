@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+          jcr:language="de"
+          jcr:mixinTypes="[mix:language]"
+          jcr:primaryType="nt:folder">
+    <cookieMessage
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="page.cookieMessage"
+            sling:message="Diese Seite verwendet Cookies, um Ihre Sprache und andere Einstellungen speichern zu können. Es werden keine persönlichen Daten gespeichert.
+Mit der Nutzung dieser Seite erklären Sie sich mit der Verwendung von Cookies einverstanden.
+Um diese Nachricht zu schließen, klicken Sie bitte hier."/>
+    <acceptMessage
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="page.acceptMessage"
+            sling:message="Akzeptieren"/>
+</jcr:root>

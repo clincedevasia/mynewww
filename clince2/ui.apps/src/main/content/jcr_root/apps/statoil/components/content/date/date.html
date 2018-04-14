@@ -1,0 +1,7 @@
+<div data-sly-use.date="com.statoil.reinvent.components.wcmuse.Date" class="${date.classList  @ join=' '}" data-sly-test="${date.date}">
+    <span class="date_module-icon fa fa-calendar"></span>${date.date}
+</div>
+<div class="edit-info" data-sly-test="${!date.date}">
+    <span class="fa fa-info-circle"></span> No date set
+</div>
+

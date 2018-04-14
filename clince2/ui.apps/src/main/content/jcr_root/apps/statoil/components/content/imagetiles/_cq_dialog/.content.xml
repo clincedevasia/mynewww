@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Image Tiles"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html#List">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <pages
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/apps/statoil/components/commons/multifield"
+                        fieldDescription="Click the '+' to add an image (2-4)">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./images">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <image
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Image Path"
+                                            name="./image"
+                                            rootPath="/content/dam/statoil"/>
+                                        <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                            fieldLabel="Image Description"
+                                            name="./description"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </pages>
+                    <spacebelow
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Space below"
+                        name="./space">
+                        <items jcr:primaryType="nt:unstructured">
+                            <def
+                                jcr:primaryType="nt:unstructured"
+                                text="(default)"
+                                value=""/>
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value="space-below_none"/>
+                            <normal
+                                jcr:primaryType="nt:unstructured"
+                                text="Normal"
+                                value="space-below_normal"/>
+                            <big
+                                jcr:primaryType="nt:unstructured"
+                                text="Big"
+                                value="space-below_big"/>
+                        </items>
+                    </spacebelow>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

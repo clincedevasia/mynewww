@@ -1,0 +1,19 @@
+<div data-sly-use.latestNews="com.statoil.reinvent.components.wcmuse.LatestNews"
+     data-sly-use.itemTemplate="../list/listitem.html"
+     data-sly-use.emptyRenderer="emptylist.html"
+     data-sly-unwrap>
+  <div data-sly-call="${emptyRenderer.emptylisttemplate @ list=latestNews}" data-sly-unwrap></div>
+  <div class="component-container ${latestNews.space}">
+    <div class="list-container" id="${latestNews.nodeName}" data-nodepath="${latestNews.nodePath}">
+      <div class="header ${latestNews.linkUrl ? 'link-in-header' : ''}">
+          <a data-sly-test="${latestNews.linkUrl}" class="more-link" href="${latestNews.linkUrl}">${latestNews.linkText} ›</a>
+          <h2 data-sly-test="${latestNews.title}">${latestNews.title}</h2>
+      </div>
+
+      <ul data-sly-list.listItem="${latestNews.list}" class="list-container tiles">
+          <li data-sly-call="${itemTemplate['news'] @ renderItem=listItem, hideDate=latestNews.hideDate}" class="list-item news"></li>
+      </ul>
+      <div class="more-results" data-sly-test="${latestNews.moreResults && latestNews.showMoreButton}"><button class="more-results-btn">${'list.more' @ i18n, locale=latestNews.language}</button></div>
+    </div>
+  </div>
+</div>

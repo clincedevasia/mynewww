@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Title"
+    title="Copying Content"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <srcPath
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Please enter the Source path from where you want to copy content"
+            fieldLabel="Source Path"
+            name="./srcPath"
+            xtype="pathfield"/>
+        <destPath
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Please enter the Destination path from where you want to copy content"
+            fieldLabel="Destination Path"
+            name="./destPath"
+            xtype="pathfield"/>
+        <liveSyncPath
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Please enter the Destination path of the node where you are getting a null pointer exception."
+            fieldLabel="Destination Path of the LiveSync Node"
+            name="./liveSyncPath"
+            xtype="pathfield"/>
+    </items>
+    <listeners jcr:primaryType="nt:unstructured"/>
+</jcr:root>

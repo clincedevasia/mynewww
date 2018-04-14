@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="IFrame"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Button">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <fieldset
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="IFrame Attributes"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <linkURL
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Url to external webpage"
+                                        fieldLabel="Link to"
+                                        name="./linkURL"
+                                        rootPath="/content"/>
+                                    <iframeType
+                                        granite:class="cq-dialog-dropdown-showhide"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Iframe type"
+                                        name="./iframetype">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Default"
+                                                value="default"/>
+                                            <aspect169
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Aspect ratio 16:9"
+                                                value="aspect169"/>
+                                            <aspect43
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Aspect ratio 4:3"
+                                                value="aspect43"/>
+                                            <aspect11
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Aspect ratio 1:1"
+                                                value="aspect11"/>
+                                        </items>
+                                    </iframeType>
+                                    <wellSetDefault
+                                        granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            showhidetargetvalue="default"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <height
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldDescription="Height in pixels"
+                                                fieldLabel="Height"
+                                                name="./height"/>
+                                        </items>
+                                    </wellSetDefault>
+                                    <spacebelow
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Space below"
+                                        name="./space">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <def
+                                                jcr:primaryType="nt:unstructured"
+                                                text="(default)"
+                                                value=""/>
+                                            <none
+                                                jcr:primaryType="nt:unstructured"
+                                                text="None"
+                                                value="space-below_none"/>
+                                            <normal
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Normal"
+                                                value="space-below_normal"/>
+                                            <big
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Big"
+                                                value="space-below_big"/>
+                                        </items>
+                                    </spacebelow>
+                                </items>
+                            </column>
+                        </items>
+                    </fieldset>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

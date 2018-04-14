@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:description="Generic template for Statoil Section Pages"
+          jcr:primaryType="cq:Template"
+          jcr:title="Statoil Section Page"
+          allowedPaths="[/content(/.*)?]"
+          ranking="{Long}90">
+    <jcr:content
+            cq:allowedTemplates="[/apps/statoil/templates/topic]"
+            cq:designPath="/etc/designs/statoil"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="statoil/components/page/section">
+        <topbanner
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="statoil/components/content/image"
+                bodyText="{Boolean}true">
+            <banner
+                    jcr:primaryType="nt:unstructured"
+                    disableText="{Boolean}true"
+                    angle="bottom"/>
+            <par jcr:primaryType="nt:unstructured"
+                 sling:resourceType="foundation/components/parsys"/>
+        </topbanner>
+        <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"/>
+    </jcr:content>
+</jcr:root>

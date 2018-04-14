@@ -1,0 +1,38 @@
+<div class="content" data-sly-use.searchInfo="com.statoil.reinvent.components.wcmuse.SearchPageComponent" role="main">
+
+	<!--/* Facebook Search Events Code */-->
+	<script> 
+    	fbq('track', 'Search');
+    </script>
+    <!--/* End Facebook Search Events Code */-->
+
+	<div data-sly-resource="${'cookiealert' @ resourceType='statoil/components/content/cookiealert'}" data-sly-unwrap></div>
+	<div class="page-container modal-page">
+		<section class="search" id="global-search" role="search">
+			<header>
+				<input type="text" id="search-field" placeholder="${'search' @ i18n, locale=searchInfo.language}" aria-describedby="search-field-label">
+				<input id="search-language" type="hidden" value="${searchInfo.language}" data-emptysearch="${'search.emptysearch' @ i18n, locale=searchInfo.language}">
+				<label id="search-field-label" for="search-field">
+					<span class="mobile">${'searchlabelmobile' @ i18n, locale=searchInfo.language}</span>
+					<span class="desktop">${'searchlabel' @ i18n, locale=searchInfo.language}</span>
+				</label>
+				<div class="loading-indicator-wrapper">
+					<span class="loading-indicator fa fa-spinner fa-spin"></span>
+				</div>
+				<span class="search-field-results" data-pattern="${'searchresults' @ i18n, locale=searchInfo.language}">Hits</span>
+			</header>
+			<div class="column" id="site">
+				<div class="search-meta"><span class="hits" data-pattern="${'hits' @ i18n, locale=searchInfo.language}"></span> ${'site' @ i18n, locale=searchInfo.language}<button class="show-all"><span class="more">${'showall' @ i18n, locale=searchInfo.language} <span class="fa fa-chevron-down"></span></span><span class="less">${'showless' @ i18n, locale=searchInfo.language} <span class="fa fa-chevron-up"></span></span></button></div>
+				<h2>${'site' @ i18n, locale=searchInfo.language}</h2>
+				<div class="results">
+				</div>
+			</div>
+			<div class="column" id="news">
+				<div class="search-meta"><span class="hits" data-pattern="${'hits' @ i18n, locale=searchInfo.language}"></span> ${'news' @ i18n, locale=searchInfo.language}<button class="show-all"><span class="more">${'showall' @ i18n, locale=searchInfo.language} <span class="fa fa-chevron-down"></span></span><span class="less">${'showless' @ i18n, locale=searchInfo.language} <span class="fa fa-chevron-up"></span></span></button></div>
+				<h2>${'news' @ i18n, locale=searchInfo.language}</h2>
+				<div class="results">
+				</div>
+			</div>
+		</section>
+	</div>
+</div>

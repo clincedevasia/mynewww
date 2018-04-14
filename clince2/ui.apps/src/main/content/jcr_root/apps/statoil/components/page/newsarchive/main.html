@@ -1,0 +1,26 @@
+<div class="content news-content archive" role="main">
+	<div data-sly-resource="${'cookiealert' @ resourceType='statoil/components/content/cookiealert'}" data-sly-unwrap></div>
+	<div class="news-page article">
+		<h1>${properties.jcr:title}</h1>
+		<div class="date">
+			<div class="date-module" data-sly-use.news="com.statoil.reinvent.components.wcmuse.NewsArchivePageComponent">
+				<div class="date-module">
+					<span class="date_module-icon fa fa-calendar"></span>
+					<span>${news.created} ${news.createdTimeZone}</span>
+				</div>
+			</div>
+		</div>
+		<div data-sly-unwrap data-sly-resource="${'par' @ resourceType='statoil/foundation/components/parsys'}"></div>
+		<section class="downloads" data-sly-use.downloads="com.statoil.reinvent.components.wcmuse.NewsArchiveDownloads" data-sly-test="${downloads.hasDownloads}" >
+			<h2>Downloads</h2>
+			<ul class="downloads" data-sly-list.child="${downloads.downloads}">
+				<li>
+					<a class="btn medium download" href="${child.fileName}" target="_blank">
+						<span class="button-text">${child.description}</span> <span class="extension">${child.extension}</span> <span class="filesize">${child.size}</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<div data-sly-include="footer.html" data-sly-unwrap></div>
+</div>

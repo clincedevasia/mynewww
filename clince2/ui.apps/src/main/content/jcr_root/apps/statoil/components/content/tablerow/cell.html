@@ -1,0 +1,16 @@
+<template data-sly-template.file="${@ cell}">
+  <div class="meta">
+    <a href="${cell.link}" class="file" target="${cell.external ? '_blank':''}">
+      <span class="icon si si-${cell.icon}"></span>
+      <span class="extension">${cell.extension}
+        <span class="filesize">${cell.filesize}</span>
+      </span>
+    </a>
+  </div>
+</template>
+<template data-sly-template.link="${@ cell}">
+    <a href="${cell.link}" target="${cell.external ? '_blank':''}">${cell.text}</a>
+</template>
+<template data-sly-template.text="${@ cell}">
+    ${cell.text}
+</template>

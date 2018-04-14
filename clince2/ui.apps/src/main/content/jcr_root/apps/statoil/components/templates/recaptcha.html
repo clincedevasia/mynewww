@@ -1,0 +1,3 @@
+<template data-sly-template.invisibleReCaptcha="${@ callBack, recaptchaId}"  data-sly-use.googleReCaptcha="com.statoil.reinvent.components.wcmuse.GoogleReCaptcha">
+    <div id='${recaptchaId}' class="g-recaptcha" data-callback='${callBack}' data-size="invisible" data-sitekey='${googleReCaptcha.reCaptchaApiClientSecret}'></div>
+</template>

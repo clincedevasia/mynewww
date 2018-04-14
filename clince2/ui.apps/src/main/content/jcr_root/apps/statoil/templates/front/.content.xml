@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Generic template for Statoil Site Front Pages"
+    jcr:primaryType="cq:Template"
+    jcr:title="Statoil Site Front Page"
+    allowedPaths="[/content(/.*)?]"
+    ranking="{Long}90">
+    <jcr:content
+        cq:allowedTemplates="[/apps/statoil/templates/front,/apps/statoil/templates/section,/apps/statoil/templates/newsroom,/apps/statoil/templates/magazine,/apps/statoil/templates/languages,/apps/statoil/templates/search,/apps/statoil/templates/error]"
+        cq:designPath="/etc/designs/statoil"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="statoil/components/page/front">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+    </jcr:content>
+</jcr:root>

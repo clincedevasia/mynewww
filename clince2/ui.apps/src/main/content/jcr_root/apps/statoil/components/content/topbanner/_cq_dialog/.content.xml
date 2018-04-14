@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Top Content"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <topbanner
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Top Content"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <headermode
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Mode"
+                                name="./mode">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="(default)"
+                                        value=""/>
+                                    <map
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Map"
+                                        value="map"/>
+                                    <topbanner
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Banner"
+                                        value="banner"/>
+                                    <topbannervideo
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Banner with video"
+                                        value="video"/>
+                                    <carousel
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Carousel"
+                                        value="carousel"/>
+                                </items>
+                            </headermode>
+                            <backgroundcolor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Background Color"
+                                name="./backgroundColor">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="(default)"
+                                        value=""/>
+                                    <white
+                                        jcr:primaryType="nt:unstructured"
+                                        text="White"
+                                        value="white"/>
+                                    <gray
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Gray"
+                                        value="gray"/>
+                                </items>
+                            </backgroundcolor>
+                        </items>
+                    </column>
+                </items>
+            </topbanner>
+        </items>
+    </content>
+</jcr:root>

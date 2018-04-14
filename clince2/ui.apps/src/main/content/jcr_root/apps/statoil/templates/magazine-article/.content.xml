@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Generic template for Statoil Magazine Article Pages"
+    jcr:primaryType="cq:Template"
+    jcr:title="Statoil Magazine Article Page"
+    allowedPaths="[/content(/.*)?]"
+    ranking="{Long}90">
+    <jcr:content
+        cq:allowedTemplates="[/apps/statoil/templates/panel]"
+        cq:designPath="/etc/designs/statoil"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="statoil/components/page/magazine-article"
+        pushMails="true">
+        <topbanner
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="statoil/components/content/image">
+            <banner
+                jcr:primaryType="nt:unstructured"
+                angle=""
+                bottombar="{Boolean}true"/>
+        </topbanner>
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+    </jcr:content>
+</jcr:root>

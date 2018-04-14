@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+          jcr:language="no"
+          jcr:mixinTypes="[mix:language]"
+          jcr:primaryType="nt:folder">
+    <cookieMessage
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="page.cookieMessage"
+            sling:message="Vi bruker cookies for å tilby den beste opplevelsen for deg. Ved å lukke denne meldingen aksepterer du vår bruk av cookies. Du kan lære mer om cookies på vår privacy og settings side"/>
+    <acceptMessage
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="page.acceptMessage"
+            sling:message="Aksepter &amp; Lukk"/>
+</jcr:root>

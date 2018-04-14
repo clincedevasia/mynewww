@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Stock Holder"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Title">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <fieldset
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Stock Attributes"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <feed
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Select feed"
+                                        name="./feed">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <ose
+                                                jcr:primaryType="nt:unstructured"
+                                                text="OSE"
+                                                value="OSE"/>
+                                            <nyce
+                                                jcr:primaryType="nt:unstructured"
+                                                text="NYSE"
+                                                value="NYSE"/>
+                                        </items>
+                                    </feed>
+                                    <type
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Number color"
+                                        name="./color">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <black
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Black"
+                                                value="black"/>
+                                            <white
+                                                jcr:primaryType="nt:unstructured"
+                                                text="White"
+                                                value="white"/>
+                                            <cyan
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Cyan"
+                                                value="cyan"/>
+                                            <magenta
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Magenta"
+                                                value="magenta"/>
+                                        </items>
+                                    </type>
+                                    <textcolor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Text color"
+                                        name="./textcolor">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dark
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Dark"
+                                                value=""/>
+                                            <light
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Light"
+                                                value="alternate"/>
+                                        </items>
+                                    </textcolor>
+                                    <spacebelow
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Space below"
+                                        name="./space">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <def
+                                                jcr:primaryType="nt:unstructured"
+                                                text="(default)"
+                                                value=""/>
+                                            <none
+                                                jcr:primaryType="nt:unstructured"
+                                                text="None"
+                                                value="space-below_none"/>
+                                            <normal
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Normal"
+                                                value="space-below_normal"/>
+                                            <big
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Big"
+                                                value="space-below_big"/>
+                                        </items>
+                                    </spacebelow>
+                                    <countup
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Will try to do a countup if the value is a number"
+                                        fieldLabel="Count up"
+                                        name="./countup"
+                                        text="Count up"
+                                        value="true"/>
+                                </items>
+                            </column>
+                        </items>
+                    </fieldset>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

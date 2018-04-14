@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    brand.master.apn.id="32"
+    brand.master.authentication.url="https://cloud.brandmaster.com/apigateway/apigateway.dll/SOAP_UNENCRYPTED?service=Authentication"
+    brand.master.client.secret="436A925B124666CCE053F210630A046C"
+    brand.master.oty.id="114961"
+    brand.master.password="df823HISD!io8Hnsdf"
+    brand.master.ptl.id="14414"
+    brand.master.subscription.url="https://cloud.brandmaster.com/apigateway/apigateway.dll/SOAP_UNENCRYPTED?service=Subscription"/>

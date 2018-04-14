@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    include-filter.config.add_comment="{Boolean}false"
+    include-filter.config.enabled="{Boolean}true"
+    include-filter.config.ignoreUrlParams="[\0]"
+    include-filter.config.include-type="SSI"
+    include-filter.config.path="/content"
+    include-filter.config.required_header=""
+    include-filter.config.resource-types="[statoil/components/content/remittable]"
+    include-filter.config.rewrite="{Boolean}false"
+    include-filter.config.selector="nocache"
+    include-filter.config.ttl="0"/>

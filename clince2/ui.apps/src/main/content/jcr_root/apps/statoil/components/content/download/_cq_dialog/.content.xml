@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Download button"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Button">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <fieldset
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Download Button Attributes"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <buttontitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Button title"
+                                        name="./buttontext"/>
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Leave empty to use file title"
+                                        fieldLabel="Title"
+                                        name="./jcr:title"/>
+                                    <linkURL
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldDescription="Drop files or pages from the Content Finder"
+                                        fieldLabel="Link to"
+                                        name="./linkURL"
+                                        rootPath="/content/dam"/>
+                                    <type
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Type / Size"
+                                        name="./size">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <medium
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Medium"
+                                                value="medium"/>
+                                            <large
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Large"
+                                                value="large"/>
+                                        </items>
+                                    </type>
+                                    <colors
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Colors"
+                                        name="./colors">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <medium
+                                                jcr:primaryType="nt:unstructured"
+                                                text="(default)"
+                                                value=""/>
+                                            <magazine
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Magenta"
+                                                value="magazine"/>
+                                            <magazine-inverted
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Magenta inverted"
+                                                value="magazine-inverted"/>
+                                            <tools
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Blue"
+                                                value="tools"/>
+                                            <tools-inverted
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Blue inverted"
+                                                value="tools-inverted"/>
+                                        </items>
+                                    </colors>
+                                    <disabletitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Show Title"
+                                        name="./showTitle">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <medium
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Yes"
+                                                value="{Boolean}true"/>
+                                            <large
+                                                jcr:primaryType="nt:unstructured"
+                                                text="No"
+                                                value="{Boolean}false"/>
+                                        </items>
+                                    </disabletitle>
+                                    <align
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Alignment"
+                                        name="./align">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <def
+                                                jcr:primaryType="nt:unstructured"
+                                                text="(default)"
+                                                value=""/>
+                                            <left
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Left"
+                                                value="left"/>
+                                            <center
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Center"
+                                                value="center"/>
+                                            <right
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Right"
+                                                value="right"/>
+                                            <full
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Justified"
+                                                value="justified"/>
+                                        </items>
+                                    </align>
+                                    <icon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldDescription="Will try to resolve an icon if icon for filetype is available"
+                                        fieldLabel="Show icon"
+                                        name="./icon"
+                                        text="Show icon"
+                                        value="true"/>
+                                    <spacebelow
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        fieldLabel="Space below"
+                                        name="./space">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <def
+                                                jcr:primaryType="nt:unstructured"
+                                                text="(default)"
+                                                value=""/>
+                                            <none
+                                                jcr:primaryType="nt:unstructured"
+                                                text="None"
+                                                value="space-below_none"/>
+                                            <normal
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Normal"
+                                                value="space-below_normal"/>
+                                            <big
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Big"
+                                                value="space-below_big"/>
+                                        </items>
+                                    </spacebelow>
+                                </items>
+                            </column>
+                        </items>
+                    </fieldset>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

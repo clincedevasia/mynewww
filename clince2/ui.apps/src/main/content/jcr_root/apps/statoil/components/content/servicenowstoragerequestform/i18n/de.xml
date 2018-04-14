@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="de"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <company
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.company"
+        sling:message="Unternehmen"/>
+    <company-error
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.company-error"
+        sling:message="Bitte geben Sie den Namen Ihres Unternehmens ein"/>
+    <contactperson
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.contactperson"
+        sling:message="Gesprächspartner"/>
+    <contactperson-error
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.contactperson-error"
+        sling:message="Bitte geben Sie den Namen eines Ansprechpartners ein"/>
+    <email
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.email"
+        sling:message="E-Mail-Adresse"/>
+    <email-error
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.email-error"
+        sling:message="Bitte geben Sie Ihre E-Mail-Adresse an"/>
+    <entrycapacity
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.entrycapacity"
+        sling:message="Einstiegskapazität in m³/h"/>
+    <entrycapacityplaceholder
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.entrycapacityplaceholder"
+        sling:message="Maximal 770 000 Nm³ pro Stunde"/>
+    <exitcapacity
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.exitcapacity"
+        sling:message="Austrittskapazität in m³/h"/>
+    <exitcapacityplaceholder
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.exitcapacityplaceholder"
+        sling:message="Maximal 1 320 000 Nm³ pro Stunde"/>
+    <form-error
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.form-error"
+        sling:message="Es gibt einige Fehler in deiner Form"/>
+    <fromdate
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.datefrom"
+        sling:message="von"/>
+    <phone
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.phone"
+        sling:message="Telefonnummer"/>
+    <phone-error
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.phone-error"
+        sling:message="Bitte geben sie ihre Telefonnummer ein"/>
+    <postcode
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.postcode"
+        sling:message="Postleitzahl"/>
+    <street
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.street"
+        sling:message="Straßenname und Adresse"/>
+    <submit
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.submit"
+        sling:message="Antrag auf Gaslagerung stellen"/>
+    <submitfailed
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.submit.failed"
+        sling:message="Serverfehler"/>
+    <submitfinished
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.submit.finished"
+        sling:message="Erfolg"/>
+    <submitloading
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.submit.loading"
+        sling:message="Senden..."/>
+    <submitsucceeded
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.submit.succeeded"
+        sling:message="Danke!"/>
+    <timespan
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.timespan"
+        sling:message="Länge der Zeit"/>
+    <todate
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.dateto"
+        sling:message="nach"/>
+    <town
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.town"
+        sling:message="Stadt"/>
+    <transporter
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.transporter"
+        sling:message="Transporter"/>
+    <volume
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.volume"
+        sling:message="Volumen des Arbeitsgases in m³"/>
+    <volumeplaceholder
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="servicenowstoragerequestform.volumeplaceholder"
+        sling:message="Maximal 200 000 000 Nm³"/>
+</jcr:root>

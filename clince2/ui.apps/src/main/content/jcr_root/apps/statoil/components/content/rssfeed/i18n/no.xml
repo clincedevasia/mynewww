@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="no"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <allNews
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="rssFeed.allNews"
+            sling:message="Alle nyheter"/>
+
+    <notifiableTrading
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="rssFeed.notifiableTrading"
+            sling:message="Meldepliktig handel"/>
+
+    <remit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="rssFeed.remit"
+            sling:message="REMIT"/>
+
+    <stockMarketAnnouncements
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="rssFeed.stockMarketAnnouncements"
+            sling:message="Børsmeldinger"/>
+
+    <vacantPositions
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="rssFeed.vacantPositions"
+            sling:message="Ledige stillinger"/>
+
+</jcr:root>

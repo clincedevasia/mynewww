@@ -1,0 +1,13 @@
+<div data-sly-use.stockData="com.statoil.reinvent.components.wcmuse.Stockholder" data-sly-unwrap>
+    <div class="edit-info" data-sly-test="${!stockData.feedSelected}">
+        <span class="fa fa-info-circle"></span> Select a feed
+    </div>
+<div class="stockholder">
+    <div data-sly-test="${stockData.feedSelected}" class="component-container ${properties.space}">
+        <span class="pre ${properties.textcolor}">${stockData.data.pre}</span>
+        <span id="${stockData.id}" class="number ${stockData.countup}${properties.color}" data-number="${stockData.data.number}">0</span>
+        <span class="post ${properties.textcolor}">${stockData.data.post}</span>
+        <span class="sub ${properties.textcolor}">${stockData.data.sub}</span>
+        <span class="footer ${properties.textcolor}" data-sly-test="${stockData.data.footerText}">${stockData.data.footerText @ context='html'}</span>
+    </div></div>
+</div>

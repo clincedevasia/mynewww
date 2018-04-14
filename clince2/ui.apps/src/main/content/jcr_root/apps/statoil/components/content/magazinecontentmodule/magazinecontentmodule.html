@@ -1,0 +1,9 @@
+<section data-sly-use.magazineContentModule="com.statoil.reinvent.components.wcmuse.MagazineContentModule" data-groups="${magazineContentModule.commaSeperatedTags}" class="magazine-content-module filterable">
+    <header class="banner">
+        <div data-sly-resource="${'banner' @ resourceType='statoil/components/content/bannerinline'}" data-sly-unwrap></div>
+    </header>
+    <div class="ingress" data-sly-resource="${'text' @ resourceType='statoil/components/content/text'}"></div>
+    <footer>
+        <div data-sly-resource="${'button' @ resourceType='statoil/components/content/button'}" data-sly-unwrap></div>
+    </footer>
+</section>

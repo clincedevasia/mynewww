@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <form-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.form-error"
+            sling:message="There are some errors in your form"/>
+
+    <proposedcandidate-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.proposedcandidate-error"
+            sling:message="Please enter the full name of the proposed candidate"/>
+
+    <proposedcandidate
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.proposedcandidate"
+            sling:message="Proposed candidate (full name)"/>
+
+    <justification-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.justification-error"
+            sling:message="Please enter your justification"/>
+
+    <justification
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.justification"
+            sling:message="Justification"/>
+
+    <sectiondivider
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.sectiondivider"
+            sling:message="Proposal submitted by"/>
+
+    <fullname-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.fullname-error"
+            sling:message="Please enter your full name"/>
+
+    <fullname
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.fullname"
+            sling:message="Full name"/>
+
+    <email-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.email-error"
+            sling:message="Please enter your e-mail address"/>
+
+    <email
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.email"
+            sling:message="E-mail"/>
+
+    <shareholding-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.shareholding-error"
+            sling:message="Please enter shareholding in Statoil ASA"/>
+
+    <shareholding
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.shareholding"
+            sling:message="Shareholding in Statoil ASA"/>
+
+    <sendcopy
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.sendcopy"
+            sling:message="Send a copy of this order to my e-mail"/>
+
+    <submit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowproposecandidates.submit"
+            sling:message="Submit candidate proposal"/>
+
+</jcr:root>

@@ -1,0 +1,11 @@
+<div class="content panel-content" role="complementary">
+	<div data-sly-resource="${'cookiealert' @ resourceType='statoil/components/content/cookiealert'}" data-sly-unwrap></div>
+	<div class="page-container panel-page">
+		<!-- include the parsys component -->
+			<div data-sly-unwrap
+     data-sly-resource="${'par' @ resourceType='statoil/foundation/components/parsys'}"></div>
+			<!-- include the footer.html -->
+
+	</div>
+	<div data-sly-include="footer.html" data-sly-unwrap></div>
+</div>

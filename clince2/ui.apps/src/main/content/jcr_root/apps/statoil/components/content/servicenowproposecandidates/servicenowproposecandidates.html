@@ -1,0 +1,76 @@
+<form id="snProposeCandidates" class="statoil-form" method="post" data-sly-use.servicenowproposecandidates="com.statoil.reinvent.components.wcmuse.ServiceNowProposeCandidates" data-abide="ajax" novalidate>
+
+  <h2 data-sly-test="${properties.heading}">${properties.heading}</h2>
+
+  <div data-abide-error style="display: none;">
+    <p>${'servicenowproposecandidates.form-error' @ i18n, locale=servicenowproposecandidates.language}</p>
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowproposecandidates.proposedcandidate-error' @ i18n, locale=servicenowproposecandidates.language}</span>
+    </span>
+
+    <label for="snProposeCandidates-proposedCandidate">${'servicenowproposecandidates.proposedcandidate' @ i18n, locale=servicenowproposecandidates.language} *</label>
+    <input id="snProposeCandidates-proposedCandidate" type="text" name="proposedCandidate" required />
+  </div>
+
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowproposecandidates.justification-error' @ i18n, locale=servicenowproposecandidates.language}</span>
+    </span>
+
+    <label for="snProposeCandidates-justification">${'servicenowproposecandidates.justification' @ i18n, locale=servicenowproposecandidates.language} *</label>
+    <textarea id="snProposeCandidates-justification" rows="8" cols="50" required></textarea>
+  </div>
+
+  <div class="section-divider">
+    <h3>${'servicenowproposecandidates.sectiondivider' @ i18n, locale=servicenowproposecandidates.language}</h3>
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowproposecandidates.fullname-error' @ i18n, locale=servicenowproposecandidates.language}</span>
+    </span>
+
+    <label for="snProposeCandidates-fullName">${'servicenowproposecandidates.fullname' @ i18n, locale=servicenowproposecandidates.language} *</label>
+    <input id="snProposeCandidates-fullName" type="text" name="fullName" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowproposecandidates.email-error' @ i18n, locale=servicenowproposecandidates.language}</span>
+    </span>
+
+    <label for="snProposeCandidates-email">${'servicenowproposecandidates.email' @ i18n, locale=servicenowproposecandidates.language} *</label>
+    <input id="snProposeCandidates-email" type="text" name="fullName" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowproposecandidates.shareholding-error' @ i18n, locale=servicenowproposecandidates.language}</span>
+    </span>
+
+    <label for="snProposeCandidates-shareholding">${'servicenowproposecandidates.shareholding' @ i18n, locale=servicenowproposecandidates.language} *</label>
+    <textarea id="snProposeCandidates-shareholding" rows="4" cols="50" required></textarea>
+  </div>
+
+
+  <div class="checkbox-wrapper">
+    <div class="checkbox">
+      <input id="snProposeCandidates-sendCopyToEmail" type="checkbox" value="true" />
+      <label for="snProposeCandidates-sendCopyToEmail">${'servicenowproposecandidates.sendcopy' @ i18n, locale=servicenowproposecandidates.language}</label>
+    </div>
+  </div>
+
+  <div class="form-submit">
+    <button id="snProposeCandidates-submit" class="btn large magazine">${'servicenowproposecandidates.submit' @ i18n, locale=servicenowproposecandidates.language}</button>
+  </div>
+
+</form>

@@ -1,0 +1,105 @@
+<form id="OrderReports" class="statoil-form" method="post" data-sly-use.servicenoworderreports="com.statoil.reinvent.components.wcmuse.ServiceNowOrderReports" data-abide="ajax" novalidate>
+
+  <h2 data-sly-test="${servicenoworderreports.heading}">${servicenoworderreports.heading}</h2>
+
+  <div class="form-input checkbox-group" data-sly-test="${servicenoworderreports.annualReportPath || servicenoworderreports.statutoryReportPath || servicenoworderreports.prospectusReportPath}">
+      <span class="form-error">
+        <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+        <span class="error-message">${'servicenoworderreports.reports-error' @ i18n, locale=servicenoworderreports.language}</span>
+      </span>
+    <label>${'servicenoworderreports.reports' @ i18n, locale=subscribeform.language} *</label>
+    <div class="checkbox-group-wrapper">
+      <div class="checkbox" data-sly-test="${servicenoworderreports.annualReportPath}">
+        <input id="snOrderReports-annualReport" name="annualReport" type="checkbox" value="Yes" data-validator="checkbox_group_required" />
+        <label for="snOrderReports-annualReport">${'servicenoworderreports.annualreport' @ i18n, locale=servicenoworderreports.language} (<a href="${servicenoworderreports.annualReportPath}" target="_blank">${'servicenoworderreports.downloadfile' @ i18n, locale=servicenoworderreports.language}</a>)
+        </label>
+      </div>
+      <div class="checkbox" data-sly-test="${servicenoworderreports.statutoryReportPath}">
+        <input id="snOrderReports-statutoryReport" name="statutoryReport" type="checkbox" value="Yes" data-validator="checkbox_group_required" />
+        <label for="snOrderReports-statutoryReport">${'servicenoworderreports.statutoryreport' @ i18n, locale=servicenoworderreports.language} (<a href="${servicenoworderreports.statutoryReportPath}" target="_blank">${'servicenoworderreports.downloadfile' @ i18n, locale=servicenoworderreports.language}</a>)
+        </label>
+      </div>
+      <div class="checkbox" data-sly-test="${servicenoworderreports.prospectusReportPath}">
+        <input id="snOrderReports-prospectusReport" name="prospectusReport" type="checkbox" value="Yes" data-validator="checkbox_group_required" />
+        <label for="snOrderReports-prospectusReport">${'servicenoworderreports.prospectusreport' @ i18n, locale=servicenoworderreports.language} (<a href="${servicenoworderreports.prospectusReportPath}" target="_blank">${'servicenoworderreports.downloadfile' @ i18n, locale=servicenoworderreports.language}</a>)
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenoworderreports.fullname-error' @ i18n, locale=servicenoworderreports.language}</span>
+    </span>
+
+    <label for="snOrderReports-fullName">${'servicenoworderreports.fullname' @ i18n, locale=servicenoworderreports.language} *</label>
+    <input id="snOrderReports-fullName" type="text" name="yourName" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenoworderreports.email-error' @ i18n, locale=servicenoworderreports.language}</span>
+    </span>
+
+    <label for="snOrderReports-email">${'servicenoworderreports.email' @ i18n, locale=servicenoworderreports.language}</label>
+    <input id="snOrderReports-email" type="email" name="email" />
+  </div>
+
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenoworderreports.company-error' @ i18n, locale=servicenoworderreports.language}</span>
+    </span>
+
+    <label for="snOrderReports-company">${'servicenoworderreports.company' @ i18n, locale=servicenoworderreports.language} *</label>
+    <input id="snOrderReports-company" type="text" name="company" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenoworderreports.address-error' @ i18n, locale=servicenoworderreports.language}</span>
+    </span>
+
+    <label for="snOrderReports-address">${'servicenoworderreports.address' @ i18n, locale=servicenoworderreports.language} *</label>
+    <input id="snOrderReports-address" type="text" name="address" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenoworderreports.zip-error' @ i18n, locale=servicenoworderreports.language}</span>
+    </span>
+
+    <label for="snOrderReports-zip">${'servicenoworderreports.zip' @ i18n, locale=servicenoworderreports.language} *</label>
+    <input id="snOrderReports-zip" type="number" name="zip" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenoworderreports.city-error' @ i18n, locale=servicenoworderreports.language}</span>
+    </span>
+
+    <label for="snOrderReports-city">${'servicenoworderreports.city' @ i18n, locale=servicenoworderreports.language} *</label>
+    <input id="snOrderReports-city" type="text" name="city" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenoworderreports.country-error' @ i18n, locale=servicenoworderreports.language}</span>
+    </span>
+
+    <label for="snOrderReports-country">${'servicenoworderreports.country' @ i18n, locale=servicenoworderreports.language} *</label>
+    <input id="snOrderReports-country" type="text" name="country" required />
+  </div>
+  <sly data-sly-use.recaptcha="../../templates/recaptcha.html" data-sly-call="${recaptcha.invisibleReCaptcha @ callBack='onOrderReportsSubmit', recaptchaId='OrderReports-recaptcha'}"></sly>
+  <div class="form-submit">
+    <button id="snOrderReports-submit" class="btn large progress-button" data-loading="${'servicenoworderreports.submit.loading' @ i18n, locale=servicenoworderreports.language}" data-finished="${'servicenoworderreports.submit.finished' @ i18n, locale=servicenoworderreports.language}" data-failed="${'servicenoworderreports.submit.failed' @ i18n, locale=servicenoworderreports.language}" data-succeeded="${'servicenoworderreports.submit.succeeded' @ i18n, locale=servicenoworderreports.language}">${'servicenoworderreports.submit' @ i18n, locale=servicenoworderreports.language}</button>
+  </div>
+
+</form>

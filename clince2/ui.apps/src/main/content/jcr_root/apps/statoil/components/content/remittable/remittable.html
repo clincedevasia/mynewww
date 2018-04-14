@@ -1,0 +1,130 @@
+<script id="remit-item-template" type="text/mustache">
+  {{#.}}
+  <div class="accordion" data-accordion data-allow-all-closed="true">
+    <div class="accordion-item" data-accordion-item>
+      <ul class="remit-item">
+        <li class="description">Event ID</li>
+        <li class="data">
+          <ul class="status">
+            <li class="event-id">{{CurrentMessage.ID}}</li>
+            {{#CurrentMessage.IsPublishedByGassco}}
+            <li class="published"><span>Published by Gassco<span></li>
+            {{/CurrentMessage.IsPublishedByGassco}}
+            {{#CurrentMessage.IsUpdated}}
+            <li class="updated"><span>Updated<span></li>
+            {{/CurrentMessage.IsUpdated}}
+          </ul>
+        </li>
+        </li>
+
+        <li class="description">Published <span>(CET)</span></li>
+        <li class="data">{{CurrentMessage.MessagePublishedDateLocal}} <br/>{{CurrentMessage.MessagePublishedTimeOfDayLocal}}</li>
+
+        <li class="description">Event start <span>(CET)</span></li>
+        <li class="data">{{CurrentMessage.EventStartDateLocal}} <br/>{{CurrentMessage.EventStartTimeOfDayLocal}}</li>
+
+        <li class="description">Expected end <span>(CET)</span></li>
+        <li class="data">{{CurrentMessage.ExpectedEventEndDateLocal}} <br/>{{CurrentMessage.ExpectedEventEndTimeOfDayLocal}}</li>
+
+        <li class="description">Event end <span>(CET)</span></li>
+        {{#CurrentMessage.ActualEventEndTime}}
+        <li class="data">{{CurrentMessage.ActualEventEndDateLocal}} <br/>{{CurrentMessage.ActualEventEndTimeOfDayLocal}}</li>
+        {{/CurrentMessage.ActualEventEndTime}}
+        {{^CurrentMessage.ActualEventEndTime}}
+        <li class="data"> - </li>
+        {{/CurrentMessage.ActualEventEndTime}}
+
+        <li class="description">Volume impact <span>(MSm /day)</span></li>
+        <li class="data">{{CurrentMessage.Volume}}</li>
+
+        <li class="description">Comments</li>
+        <li class="data">{{CurrentMessage.Comments}}</li>
+      </ul>
+
+      {{#MessageHistory.length}}
+      <a class="accordion-title" href="#">View history</a>
+      {{/MessageHistory.length}}
+
+      <div class="accordion-content" data-tab-content>
+        {{#MessageHistory}}
+        <ul class="remit-item">
+          <li class="description">Event ID</li>
+          <li class="data">{{ID}}</li>
+
+          <li class="description">Published <span>(CET)</span></li>
+          <li class="data">{{MessagePublishedDateLocal}} <br/>{{MessagePublishedTimeOfDayLocal}}</li>
+
+          <li class="description">Event start <span>(CET)</span></li>
+          <li class="data">{{EventStartDateLocal}} <br/>{{EventStartTimeOfDayLocal}}</li>
+
+          <li class="description">Expected end <span>(CET)</span></li>
+          <li class="data">{{ExpectedEventEndDateLocal}} <br/>{{ExpectedEventEndTimeOfDayLocal}}</li>
+
+          <li class="description">Event end <span>(CET)</span></li>
+          {{#ActualEventEndTime}}
+          <li class="data">{{ActualEventEndDateLocal}} <br/>{{ActualEventEndTimeOfDayLocal}}</li>
+          {{/ActualEventEndTime}}
+          {{^ActualEventEndTime}}
+          <li class="data"> - </li>
+          {{/ActualEventEndTime}}
+
+          <li class="description">Volume impact <span>(MSm /day)</span></li>
+          <li class="data">{{Volume}}</li>
+
+          <li class="description">Comments</li>
+          <li class="data">{{Comments}}</li>
+        </ul>
+        {{/MessageHistory}}
+      </div>
+    </div>
+  </div>
+  {{/.}}
+</script>
+
+<div id="remit-container">
+
+  <ul id="remit-tabs" class="tabs" data-tabs >
+    <li class="tabs-title is-active"><a href="#unplanned-events" aria-selected="true">Unplanned events</a></li>
+    <li class="tabs-title"><a href="#planned-events">Planned events</a></li>
+  </ul>
+
+  <div class="tabs-content" data-tabs-content="remit-tabs">
+    <div class="tabs-panel is-active" id="unplanned-events">
+      <div class="remit-table accordion" data-accordion data-allow-all-closed="true">
+        <ul class="remit-legend">
+          <li class="updated">Updated</li>
+          <li class="published">Published by Gassco</li>
+        </ul>
+
+        <ul class="remit-header">
+          <li>Event ID</li>
+          <li>Published <span>(CET)</span></li>
+          <li>Event start <span>(CET)</span></li>
+          <li>Expected end <span>(CET)</span></li>
+          <li>Event end <span>(CET)</span></li>
+          <li>Volume impact <span>(MSm /day)</span></li>
+          <li>Comments</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tabs-panel" id="planned-events">
+      <div class="remit-table accordion" data-accordion data-allow-all-closed="true">
+        <ul class="remit-legend">
+          <li class="updated">Updated</li>
+          <li class="published">Published by Gassco</li>
+        </ul>
+
+        <ul class="remit-header">
+          <li>Event ID</li>
+          <li>Published <span>(CET)</span></li>
+          <li>Event start <span>(CET)</span></li>
+          <li>Expected end <span>(CET)</span></li>
+          <li>Event end <span>(CET)</span></li>
+          <li>Volume impact <span>(MSm /day)</span></li>
+          <li>Comments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

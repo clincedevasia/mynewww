@@ -1,0 +1,7 @@
+<div class="component-container ${properties.space}">
+    <span class="pre ${properties.textcolor}">${properties.pre}</span>
+    <span data-sly-use.mainNumber="com.statoil.reinvent.components.wcmuse.MainNumber" id="${mainNumber.id}" class="number ${mainNumber.countup}${properties.color}" data-number="${properties.number}">0</span>
+    <span class="post ${properties.textcolor}">${properties.post}</span>
+    <span class="sub ${properties.textcolor}">${properties.sub}</span>
+    <span class="footer ${properties.textcolor}" data-sly-test="${properties.footerText}">${properties.footerText @ context='html'}</span>
+</div>

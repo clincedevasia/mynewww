@@ -1,0 +1,14 @@
+<div class="content">
+	<div data-sly-resource="${'cookiealert' @ resourceType='statoil/components/content/cookiealert'}" data-sly-unwrap></div>
+	<div class="page-header-content"
+		data-sly-resource="${'topbanner' @ resourceType='statoil/components/content/topbanner'}" role="banner"></div>
+	<main id="main" class="page-container" role="main">
+		<!-- include the parsys component -->
+			<div data-sly-unwrap
+     data-sly-resource="${'par' @ resourceType='statoil/foundation/components/parsys'}"></div>
+			<!-- include the footer.html -->
+	</main>
+
+	<div data-sly-include="footer.html" data-sly-unwrap></div>
+
+</div>

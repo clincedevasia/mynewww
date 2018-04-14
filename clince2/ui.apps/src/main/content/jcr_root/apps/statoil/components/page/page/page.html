@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html data-sly-use.pageProperties="com.statoil.reinvent.components.wcmuse.PageComponentPageProperties" lang="${pageProperties.language}">
+    <head data-pixelid=${pageProperties.facebookPixelId}>
+		<!--/* Google Tag Manager */-->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KQH8LWW');</script>
+		<!--/* End Google Tag Manager */-->
+
+        <!--/* Facebook Pixel Code */-->
+        <script>
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          var pixelId = document.getElementsByTagName("HEAD")[0].getAttribute("data-pixelid");
+          fbq('init', pixelId);
+          fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+          src="https://www.facebook.com/tr?id=${pageProperties.facebookPixelId}&ev=PageView&noscript=1"
+        /></noscript>
+        <!--/* End Facebook Pixel Code */-->
+
+        <sly data-sly-include="redirect.jsp" data-sly-unwrap/>
+        <sly data-sly-include="head.html" data-sly-unwrap/>
+        <sly data-sly-include="headlibs.html" data-sly-unwrap/>
+    </head>
+
+	<!--/* Facebook ViewContent Events Code */-->
+	<script> 
+    	fbq('track', 'ViewContent');
+    </script>
+    <!--/* End Facebook ViewContent Events Code */-->
+
+	<body class="${properties.bodyClasses}${pageProperties.pageDepth == 4 ? ' section-page' : ''}${pageProperties.toolsPage ? ' tools-page' : ''}${pageProperties.searchPage ? ' search-body' : ''}">
+		<!--/* Google Tag Manager (noscript) */-->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQH8LWW"
+						  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!--/* End Google Tag Manager (noscript) */-->
+		<div class="container">
+
+      <a href="#main" class="skip-to-main">Skip to main content</a>
+			<div data-sly-include="header.html" data-sly-unwrap></div>
+			<div data-sly-include="main.html" data-sly-unwrap></div>
+			<div id="modal-languages" class="banner-top_languages mfp-hide" data-sly-resource="${'languages' @ resourceType='statoil/components/content/languageswitch'}" />
+		</div>
+
+		<div data-sly-test="${properties.inPageNavigation}" data-sly-unwrap>
+			<nav id="in-page-nav">
+			</nav>
+		</div>
+
+	    <button data-sly-test="${!(currentPage.name=='languages')}" id="scroll-to-top" class="animate fa fa-angle-up">
+  			<span>Scroll to the top of the page</span>
+  		</button>
+
+		<!--/* Include Adobe Dynamic Tag Management libraries for the footer */-->
+		<sly data-sly-resource="${'cloudservices' @ resourceType='cq/cloudserviceconfigs/components/servicecomponents'}" data-sly-unwrap/>
+	
+
+		<!--/*<div data-sly-test="${!properties.disableClientContext}" data-sly-unwrap>*/-->
+			<!--/*<sly data-sly-resource="${'clientcontext' @ resourceType='/libs/cq/personalization/components/clientcontext'}" data-sly-unwrap/>*/-->
+		<!--/*</div>*/-->
+		
+		<sly data-sly-test.useCDN="${pageProperties.useCdn}">
+			<script src="${pageProperties.cdnUrl}"></script>
+		</sly>
+		
+		<sly data-sly-test="${!useCDN}">
+			<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call="${clientLib.js @ categories='reinvent'}" data-sly-unwrap/>
+		</sly>
+
+
+		<div data-sly-test="${properties.inPageNavigation}" data-sly-unwrap>
+			<script>
+				$(function (){
+					InPageNavigationModule.initialize();
+				});
+			</script>
+		</div>
+		<div data-sly-test="${currentPage.name=='languages'}" data-sly-unwrap>
+			<script>
+				$(function (){
+					LanguageSwitchModule.initialize();
+				});
+			</script>
+		</div>
+        <sly data-sly-use.googleReCaptcha="com.statoil.reinvent.components.wcmuse.GoogleReCaptcha">
+            <sly data-sly-test.language = ${googleReCaptcha.language}> 
+        		<script src='https://www.google.com/recaptcha/api.js?hl=${language}&onload=onloadCallback&render=explicit' async defer></script>
+            </sly>
+            <sly data-sly-test = ${!language}> 
+        		<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+            </sly>
+        </sly>
+	</body>
+</html>

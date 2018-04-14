@@ -1,0 +1,41 @@
+<div data-sly-unwrap
+     data-sly-use.listComponent="com.statoil.reinvent.components.wcmuse.ListComponent"
+     data-sly-use.emptyRenderer="emptylist.html"
+     data-sly-use.itemTemplate="listitem.html">
+    <div data-sly-call="${emptyRenderer.emptylisttemplate @ list=listComponent}" data-sly-unwrap></div>
+
+    <div class="component-container ${listComponent.space}">
+      <div class="list-container" id="${listComponent.nodeName}" data-nodepath="${listComponent.nodePath}">
+          <h2 data-sly-test="${listComponent.title}">${listComponent.title}</h2>
+          <div class="tags-filter" data-sly-test="${listComponent.filterEnabled}">
+              <div data-sly-list.tagItem="${listComponent.tags}" data-sly-unwrap>
+                  <button class="tag-filter" data-tag="${tagItem}">
+                      ${tagItem}
+                  </button>
+              </div>
+          </div>
+          <div class="search-and-sort" data-sly-test="${listComponent.sortEnabled || listComponent.searchEnabled}">
+
+            <div class="sort-options-container" data-sly-test="${listComponent.sortEnabled}">
+                <select class="sort-options  list-sort-option" data-sly-test="${listComponent.sortEnabled}" name="sort">
+                    <option value="">${'list.sort' @ i18n, locale=listComponent.language}</option>
+                    <option value="date" selected="${listComponent.sort == 'date'}">${'list.date' @ i18n, locale=listComponent.language}</option>
+                    <option value="title" selected="${listComponent.sort == 'title'}">${'list.title' @ i18n, locale=listComponent.language}</option>
+                </select>
+                <input type="hidden" name="offset" value="${listComponent.offset}">
+            </div>
+
+            <div class="list-search-container">
+              <input id="list-search" class="search" type="search" aria-describedby="list-search-label" placeholder="${'list.search' @ i18n, locale=listComponent.language}" name="query" data-sly-test="${listComponent.searchEnabled}">
+              <label id="list-search-label" for="list-search">Search for relevant content in the list</label>
+            </div>
+
+          </div>
+          <span class="queried" data-template="${'list.searchFor' @ i18n, locale=listComponent.language} {}" data-query="${listComponent.query}"></span>
+          <ul data-sly-list.listItem="${listComponent.list}" class="list-container${listComponent.tilesEnabled ? ' tiles' : ''}">
+              <li data-sly-test="${listComponent.currentPagePath!=listItem.item.path}" data-tags="${listItem.currentTags @ join=';'}" data-sly-call="${itemTemplate[listComponent.displayType] @ renderItem=listItem, disableImage=listComponent.disableImages}" class="list-item ${listComponent.displayType}"></li>
+          </ul>
+          <div class="more-results" data-sly-test="${listComponent.moreResults}"><button class="more-results-btn">${'list.more' @ i18n, locale=listComponent.language}</button></div>
+      </div>
+    </div>
+</div>

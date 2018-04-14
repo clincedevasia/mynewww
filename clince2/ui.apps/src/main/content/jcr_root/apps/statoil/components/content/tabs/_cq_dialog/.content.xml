@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Tabs"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Text">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <tabs
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="statoil/components/commons/multifield"
+                        fieldDescription="Click 'add' to add a new tab"
+                        fieldLabel="Tab Listing">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./tabs">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <tab
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Name to be displayed on the tab"
+                                            fieldLabel="Tab Name"
+                                            name="./tabName"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </field>
+                    </tabs>
+                    <spacebelow
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Space below"
+                        name="./space">
+                        <items jcr:primaryType="nt:unstructured">
+                            <def
+                                jcr:primaryType="nt:unstructured"
+                                text="(default)"
+                                value=""/>
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value="space-below_none"/>
+                            <normal
+                                jcr:primaryType="nt:unstructured"
+                                text="Normal"
+                                value="space-below_normal"/>
+                            <big
+                                jcr:primaryType="nt:unstructured"
+                                text="Big"
+                                value="space-below_big"/>
+                        </items>
+                    </spacebelow>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

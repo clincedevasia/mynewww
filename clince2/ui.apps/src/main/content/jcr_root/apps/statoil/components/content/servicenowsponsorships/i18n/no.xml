@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="no"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <form-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.form-error"
+            sling:message="Skjemaet er ikke korrekt utfylt"/>
+
+    <organisation-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.organisation-error"
+            sling:message="Vennligst fyll ut din gruppe eller organisasjon"/>
+
+    <organisation
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.organisation"
+            sling:message="Lag / Organisasjon"/>
+
+    <contactperson-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.contactperson-error"
+            sling:message="Vennligst fyll ut kontaktperson"/>
+
+    <contactperson
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.contactperson"
+            sling:message="Kontaktperson"/>
+
+    <phonenumber-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.phonenumber-error"
+            sling:message="Vennligst fyll ut ditt telefonnummer"/>
+
+    <phonenumber
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.phonenumber"
+            sling:message="Telefonnummer"/>
+
+    <email-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.email-error"
+            sling:message="Vennligst fyll ut din e-post adresse"/>
+
+    <email
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.email"
+            sling:message="E-post"/>
+
+    <category
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.category"
+            sling:message="Kategori"/>
+
+    <category-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.category-error"
+            sling:message="Vennligst velg kategori"/>
+
+    <categorytype-pleaseselect
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.categorytype-pleaseselect"
+            sling:message="Velg vennligst"/>
+
+    <categorytype-scienceeducation
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.categorytype-scienceeducation"
+            sling:message="Realfag"/>
+
+    <categorytype-sports
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.categorytype-sports"
+            sling:message="Idrett"/>
+
+    <categorytype-culture
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.categorytype-culture"
+            sling:message="Kultur"/>
+
+    <categorytype-disciplinaryconferences
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.categorytype-disciplinaryconferences"
+            sling:message="Fagkonferanser"/>
+
+    <categorytype-donation
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.categorytype-donation"
+            sling:message="Donasjon"/>
+
+    <location
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location"
+            sling:message="Lokasjon"/>
+
+    <location-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-error"
+            sling:message="Vennligst velg lokasjon"/>
+
+    <location-pleaseselect
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-pleaseselect"
+            sling:message="Velg vennligst"/>
+
+    <location-algeria
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-algeria"
+            sling:message="Algeria"/>
+
+    <location-angola
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-angola"
+            sling:message="Angola"/>
+
+    <location-azerbaijan
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-azerbaijan"
+            sling:message="Azerbaijan"/>
+
+    <location-australia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-australia"
+            sling:message="Australia"/>
+
+    <location-bahamas
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-bahamas"
+            sling:message="Bahamas"/>
+
+    <location-belgium
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-belgium"
+            sling:message="Belgia"/>
+
+    <location-brazil
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-brazil"
+            sling:message="Brasil"/>
+
+    <location-canada
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-canada"
+            sling:message="Canada"/>
+
+    <location-china
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-china"
+            sling:message="Kina"/>
+
+    <location-colombia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-colombia"
+            sling:message="Colombia"/>
+
+    <location-denmark
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-denmark"
+            sling:message="Danmark"/>
+
+    <location-gemany
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-germany"
+            sling:message="Tyskland"/>
+
+    <location-greenland
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-greenland"
+            sling:message="Grønland"/>
+
+    <location-india
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-india"
+            sling:message="India"/>
+
+    <location-indonesia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-indonesia"
+            sling:message="Indonesia"/>
+
+    <location-ireland
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-ireland"
+            sling:message="Irland"/>
+
+    <location-libya
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-libya"
+            sling:message="Libya"/>
+
+    <location-mexico
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-mexico"
+            sling:message="Mexico"/>
+
+    <location-mozambique
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-mozambique"
+            sling:message="Mozambique"/>
+
+    <location-myanmar
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-myanmar"
+            sling:message="Myanmar"/>
+
+    <location-thenederlands
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-thenederlands"
+            sling:message="Nederland"/>
+
+    <location-newzealand
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-newzealand"
+            sling:message="New Zealand"/>
+
+    <location-nigeria
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-nigeria"
+            sling:message="Nigeria"/>
+
+    <location-nicaragua
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-nicaragua"
+            sling:message="Nicaragua"/>
+
+    <location-norway
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-norway"
+            sling:message="Norge"/>
+
+    <location-russia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-russia"
+            sling:message="Russland"/>
+
+    <location-singapore
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-singapore"
+            sling:message="Singapore"/>
+
+    <location-southafrica
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-southafrica"
+            sling:message="Sør-Africa"/>
+
+    <location-southkorea
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-southkorea"
+            sling:message="Sør-Korea"/>
+
+    <location-suriname
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-suriname"
+            sling:message="Surinam"/>
+
+    <location-tanzania
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-tanzania"
+            sling:message="Tanzania"/>
+
+    <location-turkey
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-turkey"
+            sling:message="Tyrkia"/>
+
+    <location-unitedarabemirates
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-unitedarabemirates"
+            sling:message="De forente Arabiske Emirater"/>
+
+    <location-unitedkingdom
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-unitedkingdom"
+            sling:message="Storbritannia"/>
+
+    <location-unitestates
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-unitedstates"
+            sling:message="USA"/>
+
+    <location-uruguay
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-uruguay"
+            sling:message="Uruguay"/>
+
+    <location-venezuela
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.location-venezuela"
+            sling:message="Venezuela"/>
+
+    <application-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.application-error"
+            sling:message="Vennligst fyll ut din søknad"/>
+
+    <application
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.application"
+            sling:message="Din søknad (maks 3400 tegn)"/>
+
+    <supportingdocuments
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.supportingdocuments"
+            sling:message="Av sikkerhetsmessige årsaker er det ikke mulig å laste opp vedlegg. Ved behov for mer utfyllende informasjon vil vi ta kontakt."/>
+
+    <submit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.submit"
+            sling:message="Send søknad"/>
+
+    <submitloading
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.submit.loading"
+            sling:message="Sender..."/>
+
+    <submitfinished
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.submit.finished"
+            sling:message="Suksess"/>
+
+    <submitfailed
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.submit.failed"
+            sling:message="Serverfeil"/>
+
+    <submitsucceeded
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowsponsorships.submit.succeeded"
+            sling:message="Takk!"/>
+
+</jcr:root>

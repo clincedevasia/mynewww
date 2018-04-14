@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <form-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.form-error"
+            sling:message="There are some errors in your form"/>
+
+    <organisation-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.organisation-error"
+            sling:message="Please enter your school or organisation"/>
+
+    <organisation
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.organisation"
+            sling:message="School / Organisation"/>
+
+    <contactperson-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.contactperson-error"
+            sling:message="Please enter a contact person"/>
+
+    <contactperson
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.contactperson"
+            sling:message="Contact person"/>
+
+    <phonenumber-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.phonenumber-error"
+            sling:message="Please enter your phone number"/>
+
+    <phonenumber
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.phonenumber"
+            sling:message="Phone number"/>
+
+    <email-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.email-error"
+            sling:message="Please enter your e-mail address"/>
+
+    <email
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.email"
+            sling:message="E-mail"/>
+
+    <event
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.event"
+            sling:message="Event"/>
+
+    <event-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.event-error"
+            sling:message="Please select event"/>
+
+    <eventtype-pleaseselect
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.eventtype-pleaseselect"
+            sling:message="Please select"/>
+
+    <eventtype-careerfair
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.eventtype-careerfair"
+            sling:message="Invite Statoil to a career fair or student event"/>
+   
+    <eventtype-companypresentation
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.eventtype-companypresentation"
+            sling:message="Invite Statoil to hold a company presentation"/>
+
+    <eventtype-conference
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.eventtype-visit"
+            sling:message="Would like to visit a Statoil office or facility"/>
+
+    <location
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location"
+            sling:message="Location"/>
+
+    <location-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-error"
+            sling:message="Please select location"/>
+
+    <location-pleaseselect
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-pleaseselect"
+            sling:message="Please select"/>
+
+    <location-algeria
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-algeria"
+            sling:message="Algeria"/>
+
+    <location-angola
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-angola"
+            sling:message="Angola"/>
+
+    <location-azerbaijan
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-azerbaijan"
+            sling:message="Azerbaijan"/>
+
+    <location-australia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-australia"
+            sling:message="Australia"/>
+
+    <location-bahamas
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-bahamas"
+            sling:message="Bahamas"/>
+
+    <location-belgium
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-belgium"
+            sling:message="Belgium"/>
+
+    <location-brazil
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-brazil"
+            sling:message="Brazil"/>
+
+    <location-canada
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-canada"
+            sling:message="Canada"/>
+
+    <location-china
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-china"
+            sling:message="China"/>
+
+    <location-colombia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-colombia"
+            sling:message="Colombia"/>
+
+    <location-denmark
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-denmark"
+            sling:message="Denmark"/>
+
+    <location-gemany
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-germany"
+            sling:message="Germany"/>
+
+    <location-greenland
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-greenland"
+            sling:message="Greenland"/>
+
+    <location-india
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-india"
+            sling:message="India"/>
+
+    <location-indonesia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-indonesia"
+            sling:message="Indonesia"/>
+
+    <location-ireland
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-ireland"
+            sling:message="Ireland"/>
+
+    <location-libya
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-libya"
+            sling:message="Libya"/>
+
+    <location-mexico
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-mexico"
+            sling:message="Mexico"/>
+
+    <location-mozambique
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-mozambique"
+            sling:message="Mozambique"/>
+
+    <location-myanmar
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-myanmar"
+            sling:message="Myanmar"/>
+
+    <location-netherlands
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-netherlands"
+            sling:message="Netherlands"/>
+
+    <location-newzealand
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-newzealand"
+            sling:message="New Zealand"/>
+
+    <location-nigeria
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-nigeria"
+            sling:message="Nigeria"/>
+
+    <location-nicaragua
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-nicaragua"
+            sling:message="Nicaragua"/>
+
+    <location-norway
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-norway"
+            sling:message="Norway"/>
+
+    <location-russia
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-russia"
+            sling:message="Russia"/>
+
+    <location-singapore
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-singapore"
+            sling:message="Singapore"/>
+
+    <location-southafrica
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-southafrica"
+            sling:message="South Africa"/>
+
+    <location-southkorea
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-southkorea"
+            sling:message="South Korea"/>
+
+    <location-suriname
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-suriname"
+            sling:message="Suriname"/>
+
+    <location-tanzania
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-tanzania"
+            sling:message="Tanzania"/>
+
+    <location-turkey
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-turkey"
+            sling:message="Turkey"/>
+
+    <location-unitedarabemirates
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-unitedarabemirates"
+            sling:message="United Arab Emirates"/>
+
+    <location-unitedkingdom
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-unitedkingdom"
+            sling:message="United Kingdom"/>
+
+    <location-unitestates
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-unitedstates"
+            sling:message="United States"/>
+
+    <location-uruguay
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-uruguay"
+            sling:message="Uruguay"/>
+
+    <location-venezuela
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.location-venezuela"
+            sling:message="Venezuela"/>
+
+    <eventdescription-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.eventdescription-error"
+            sling:message="Please enter a description for the event"/>
+
+    <eventdescription
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.eventdescription"
+            sling:message="Description of event (max 3400 characters)"/>
+
+    <website
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.website"
+            sling:message="Link to website"/>
+
+
+    <supportingdocuments
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.supportingdocuments"
+            sling:message="Tick the box if you would like to send supporting documents, and we will get in touch with you"/>
+
+    <sendcopy
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.sendcopy"
+            sling:message="Send a copy of this message to my e-mail"/>
+
+    <submit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.submit"
+            sling:message="Submit form"/>
+
+    <submitloading
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.submit.loading"
+            sling:message="Sending..."/>
+
+    <submitfinished
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.submit.finished"
+            sling:message="Success"/>
+
+    <submitfailed
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.submit.failed"
+            sling:message="Server Error"/>
+
+    <submitsucceeded
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcareerfair.submit.succeeded"
+            sling:message="Thank You!"/>
+
+</jcr:root>

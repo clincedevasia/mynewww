@@ -1,0 +1,8 @@
+<div class="content newsroom-content" role="main">
+	<div data-sly-resource="${'cookiealert' @ resourceType='statoil/components/content/cookiealert'}" data-sly-unwrap></div>
+	<div class="news-page">
+			<h1>${properties.jcr:title}</h1>
+			<div class="news-list-container" data-sly-resource="${'list' @ resourceType='statoil/components/content/newsroomlist'}"></div>
+	</div>
+	<div data-sly-include="footer.html" data-sly-unwrap></div>
+</div>

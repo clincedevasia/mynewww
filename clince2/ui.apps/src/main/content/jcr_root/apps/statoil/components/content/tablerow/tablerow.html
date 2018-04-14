@@ -1,0 +1,22 @@
+<sly data-sly-use.cellTemplate="cell.html"
+	 data-sly-use.tablerow="com.statoil.reinvent.components.wcmuse.TableRow">
+	<div data-sly-test="${tablerow.itemListing.empty && wcmmode.edit}"
+		 data-sly-unwrap>
+		<div class="table-edit-cell">
+			No Data
+		</div>
+	</div>
+	<div data-sly-test="${wcmmode.edit}" data-sly-list.tablecell="${tablerow.itemListing}" data-sly-unwrap>
+		<div class="table-edit-cell ${tablerow.element}" data-sly-call="${cellTemplate[tablecell.type] @ cell=tablecell}">
+		</div>
+	</div>
+	<ul class="irtable-row" data-sly-test="${!wcmmode.edit}" data-sly-list.tablecell="${tablerow.itemListing}">
+		<sly data-sly-list.tableheading="${tablerow.headers}">
+			<li class="irtable-row-item-header" data-sly-test="${tableheadingList.index == tablecellList.index}">
+				${tableheading}
+			</li>
+		</sly>
+		<li class="irtable-row-item${tablecellList.index == 0 ? '' : ''}" data-sly-call="${cellTemplate[tablecell.type] @ cell=tablecell}">
+		</li>
+	</ul>
+</sly>

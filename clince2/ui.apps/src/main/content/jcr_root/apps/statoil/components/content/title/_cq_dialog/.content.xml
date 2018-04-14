@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Title"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Title">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="Leave empty to use the page title."
+                        fieldLabel="Title"
+                        name="./jcr:title"/>
+                    <type
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Type / Size"
+                        name="./type">
+                        <items jcr:primaryType="nt:unstructured">
+                            <def
+                                jcr:primaryType="nt:unstructured"
+                                text="(default)"
+                                value=""/>
+                            <large
+                                jcr:primaryType="nt:unstructured"
+                                text="Page title"
+                                value="h1"/>
+                            <medium
+                                jcr:primaryType="nt:unstructured"
+                                text="Section title"
+                                value="h2"/>
+                            <normal
+                                jcr:primaryType="nt:unstructured"
+                                text="Section subtitle"
+                                value="h3"/>
+                            <small
+                                jcr:primaryType="nt:unstructured"
+                                text="Caps"
+                                value="h4"/>
+                        </items>
+                    </type>
+                    <align
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Alignment"
+                        name="./align">
+                        <items jcr:primaryType="nt:unstructured">
+                            <def
+                                jcr:primaryType="nt:unstructured"
+                                text="(default)"
+                                value=""/>
+                            <left
+                                jcr:primaryType="nt:unstructured"
+                                text="Left"
+                                value="left"/>
+                            <center
+                                jcr:primaryType="nt:unstructured"
+                                text="Center"
+                                value="center"/>
+                            <right
+                                jcr:primaryType="nt:unstructured"
+                                text="Right"
+                                value="right"/>
+                        </items>
+                    </align>
+                    <spacebelow
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Space below"
+                        name="./space">
+                        <items jcr:primaryType="nt:unstructured">
+                            <def
+                                jcr:primaryType="nt:unstructured"
+                                text="(default)"
+                                value=""/>
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value="space-below_none"/>
+                            <normal
+                                jcr:primaryType="nt:unstructured"
+                                text="Normal"
+                                value="space-below_normal"/>
+                            <big
+                                jcr:primaryType="nt:unstructured"
+                                text="Big"
+                                value="space-below_big"/>
+                        </items>
+                    </spacebelow>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

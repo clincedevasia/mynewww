@@ -1,0 +1,9 @@
+<div class="${anchor.classList}"  data-sly-use.anchor="com.statoil.reinvent.components.wcmuse.Anchor">
+    <a id="${anchor.identifier}" data-label="${anchor.label}">
+        <span data-sly-unwrap="true" data-sly-test="${wcmmode.edit}">
+            <span class="fa fa-anchor"></span> 
+            <span data-sly-test="${anchor.identifier}">${anchor.identifier}</span>
+            <span data-sly-test="${!anchor.identifier}">No anchor identifier specified</span>
+        </span>
+    </a>
+</div>

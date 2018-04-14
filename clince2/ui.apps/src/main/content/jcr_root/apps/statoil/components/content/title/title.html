@@ -1,0 +1,6 @@
+<div data-sly-use.title="title.js" data-sly-unwrap>
+    <div class="component-container ${title.cssClass}" data-sly-test="${title.text}">
+        <h2 data-sly-element="${title.element}">${title.text}</h2>
+    </div>
+    <div class="cq-placeholder" data-sly-test="${!title.text}" data-emptytext="Title" />
+</div>

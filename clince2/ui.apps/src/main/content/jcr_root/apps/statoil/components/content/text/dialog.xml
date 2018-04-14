@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    helpPath="en/cq/current/wcm/default_components.html#Text"
+    title="Text"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+            jcr:primaryType="cq:Widget"
+            anchor="100%"
+            title="Text"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <text
+                    jcr:primaryType="cq:Widget"
+                    enableParagraphFormat="{Boolean}true"
+                    enableSourceEdit="{Boolean}true"
+                    enableSpecialChars="{Boolean}true"
+                    enableStyle="{Boolean}true"
+                    enableSubSuperScript="{Boolean}true"
+                    hideLabel="true"
+                    name="./text"
+                    xtype="richtext">
+                    <htmlRules jcr:primaryType="nt:unstructured">
+                        <docType jcr:primaryType="nt:unstructured">
+                            <typeConfig jcr:primaryType="nt:unstructured" useSemanticMarkup="true" />
+                        </docType>
+                    </htmlRules>
+                    <formats jcr:primaryType="nt:unstructured">
+                        <p jcr:primaryType="nt:unstructured" description="Paragraph" tag="p" />
+                        <h1 jcr:primaryType="nt:unstructured" description="Title" tag="h1" />
+                        <h2 jcr:primaryType="nt:unstructured" description="Subtitle" tag="h2" />
+                        <h3 jcr:primaryType="nt:unstructured" description="Ingress" tag="h3" />
+                        <h4 jcr:primaryType="nt:unstructured" description="Caps" tag="h4" />
+                    </formats>
+                    <subsuperscript jcr:primaryType="nt:unstructured"
+                            features="*"/>
+                    <externalStyleSheets
+                            jcr:primaryType="nt:unstructured"
+                            css1="/etc/designs/statoil/clientlib.css"/>
+                    <cssStyles
+                            jcr:primaryType="nt:unstructured"
+                            small="Small"
+                            component-title="Comp title"/>
+                    <specialCharsConfig jcr:primaryType="nt:unstructured">
+                        <chars jcr:primaryType="nt:unstructured">
+                            <copyright
+                                    jcr:primaryType="nt:unstructured"
+                                    entity="&amp;copy;"/>
+                            <epsilon
+                                    jcr:primaryType="nt:unstructured"
+                                    entity="&amp;epsilon;"/>
+                            <characterRangeExample
+                                    jcr:primaryType="nt:unstructured"
+                                    rangeEnd="{Long}90"
+                                    rangeStart="{Long}65"/>
+                        </chars>
+                    </specialCharsConfig>
+                </text>
+                <isRichTextFlag
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./textIsRich"
+                        value="true"
+                        xtype="hidden"/>
+
+            </items>
+        </tab1>
+    </items>
+</jcr:root>

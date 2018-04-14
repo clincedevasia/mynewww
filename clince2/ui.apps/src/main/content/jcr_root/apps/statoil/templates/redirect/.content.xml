@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Template"
+    jcr:title="Redirect Template for Statoil"
+    allowedPaths="[/content/statoil/en/news(/.*)?]"
+    ranking="{Long}100">
+    <jcr:content
+        cq:allowedTemplates="[/apps/statoil/templates/redirect,/apps/statoil/templates/news]"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="/libs/foundation/components/redirect"/>
+</jcr:root>

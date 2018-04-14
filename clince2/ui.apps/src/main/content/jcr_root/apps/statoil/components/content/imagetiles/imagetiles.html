@@ -1,0 +1,34 @@
+<div class="component-container ${imageTiles.space}" data-sly-use.imageTiles="com.statoil.reinvent.components.wcmuse.ImageTiles">
+  <div class="imagetiles-images ${imageTiles.countClass}"
+       data-sly-use.imageTemplate="../../templates/image.html"
+       data-sly-list.description="${imageTiles.descriptions}">
+      <div data-sly-call="${imageTemplate['default'] @ image=description.image}" data-sly-unwrap></div>
+      <div class="description-container description-container-mobile">
+          <div class="icons">
+              <span class="si si-photo${descriptionList.index == 0 ? ' active' : ''}"></span>
+              <span class="si si-photo${descriptionList.index == 1 ? ' active' : ''}"></span><br>
+              <span data-sly-test="${imageTiles.descriptions.size >= 3}" class="si si-photo${descriptionList.index == 2 ? ' active' : ''}"></span>
+              <span data-sly-test="${imageTiles.descriptions.size == 4}" class="si si-photo${descriptionList.index == 3 ? ' active' : ''}"></span>
+          </div>
+          <div class="description">
+              ${description.description}
+              <span class="photographer">${'imagetiles.photo' @ i18n} ${description.photographer}</span>
+          </div>
+      </div>
+  </div>
+  <div class="descriptions  ${imageTiles.countClass}" data-sly-list.description="${imageTiles.descriptions}">
+      <div class="description-container">
+          <div class="icons">
+              <span class="si si-photo${descriptionList.index == 0 ? ' active' : ''}"></span>
+              <span class="si si-photo${descriptionList.index == 1 ? ' active' : ''}"></span><br>
+              <span data-sly-test="${imageTiles.descriptions.size >= 3}" class="si si-photo${descriptionList.index == 2 ? ' active' : ''}"></span>
+              <span data-sly-test="${imageTiles.descriptions.size == 4}" class="si si-photo${descriptionList.index == 3 ? ' active' : ''}"></span>
+          </div>
+          <div class="description" id="${description.aria}">
+              ${description.description}
+              <span class="photographer">${'imagetiles.photo' @ i18n, locale=imageTiles.language} ${description.photographer}</span>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="edit-info" data-sly-test="${imageTiles.descriptions.size == 0}"><span class="fa fa-info-circle"></span> No images added</div>

@@ -1,0 +1,25 @@
+<sly data-sly-use.video="com.statoil.reinvent.components.wcmuse.Video">
+  <div class="component-container ${video.space}">
+    <div class="video-title">
+      <p data-sly-test="${video.title}">${video.title}</p>
+    </div>
+
+    <div data-sly-attribute.class="${video.classList}">
+      <img class="videoplayer" src="${video.posterURL}" data-emptytext="Video" alt="Video Poster">
+
+      <div class="video-sources">
+        <source src="${video.link}/jcr%3acontent/renditions/s7dam.video.firefoxhq.ogg" type="video/ogg">
+        <source src="${video.link}/jcr%3acontent/renditions/s7dam.video.hq.m4v" type="video/x-m4v">
+        <source src="${video.link}/jcr%3acontent/renditions/s7dam.video.webm.webm" type="video/webm">
+        <source src="${video.link}/jcr%3acontent/renditions/s7dam.video.iehq.mp4" type="video/mp4">
+      </div>
+
+      <div class="overplay videoplayer_play">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 960 560" enable-background="new 0 0 960 560" xml:space="preserve">
+          <circle cx="484" cy="270.6" r="260.7"/>
+          <g><polygon points="422.8,393.1 422.8,148.1 590.8,270.6"/></g>
+      </svg>
+      </div>
+    </div>
+  </div>
+</sly>

@@ -1,0 +1,11 @@
+<div class="cookie-alert" style="display:none;">
+    <div class="cookie-information">
+        <span class="cookie-information-icon">i</span>
+        <p class="cookie-message" data-sly-use.cookieAlert="com.statoil.reinvent.components.wcmuse.CookieAlert" data-emptytext="Text">
+             ${cookieAlert.message @ context='html'}
+        </p>
+    </div>
+    <button class="cookie-accept-button">
+        ${'page.acceptMessage' @ i18n, locale=language.language}
+    </button>
+</div>

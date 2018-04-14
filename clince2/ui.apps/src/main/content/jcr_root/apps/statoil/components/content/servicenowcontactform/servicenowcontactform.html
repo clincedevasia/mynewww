@@ -1,0 +1,65 @@
+<form id="ContactUs" class="statoil-form" method="post" data-sly-use.servicenowcontactform="com.statoil.reinvent.components.wcmuse.ServiceNowContactForm" data-abide="ajax" novalidate>
+
+  <h2 data-sly-test="${properties.heading}">${properties.heading}</h2>
+
+  <div class="form-input">
+
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowcontactform.fullname-error' @ i18n, locale=servicenowcontactform.language}</span>
+    </span>
+
+    <label for="snContact-fullName">${'servicenowcontactform.fullname' @ i18n, locale=servicenowcontactform.language} *</label>
+    <input id="snContact-fullName" type="text" name="yourName" required />
+  </div>
+
+  <div class="form-input">
+
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowcontactform.email-error' @ i18n, locale=servicenowcontactform.language}</span>
+    </span>
+
+    <label for="snContact-email">${'servicenowcontactform.email' @ i18n, locale=servicenowcontactform.language} *</label>
+    <input id="snContact-email" type="email" name="email" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowcontactform.category-error' @ i18n, locale=servicenowcontactform.language}</span>
+    </span>
+
+    <label for="snContact-category">${'servicenowcontactform.category' @ i18n, locale=servicenowcontactform.language} *</label>
+    <select id="snContact-category" name="category" data-validator="select_required">
+      <option value="">${'servicenowcontactform.category-pleaseselect' @ i18n, locale=servicenowcontactform.language}</option>
+      <option value="askQuestion">${'servicenowcontactform.category-askquestion' @ i18n, locale=servicenowcontactform.language}</option>
+      <option value="reportWebsiteError">${'servicenowcontactform.category-reportwebsiteerror' @ i18n, locale=servicenowcontactform.language}</option>
+      <option value="contactStaff">${'servicenowcontactform.category-contactstaff' @ i18n, locale=servicenowcontactform.language}</option>
+      <option value="investorRelations">${'servicenowcontactform.category-investorrelations' @ i18n, locale=servicenowcontactform.language}</option>
+      <option value="ethics">${'servicenowcontactform.category-ethics' @ i18n, locale=servicenowcontactform.language}</option>
+      <option value="other">${'servicenowcontactform.category-other' @ i18n, locale=servicenowcontactform.language}</option>
+    </select>
+  </div>
+
+  <div class="form-input">
+    <label for="snContact-receiver">${'servicenowcontactform.receiver' @ i18n, locale=servicenowcontactform.language}</label>
+    <input id="snContact-receiver" type="text" name="receiver" />
+  </div>
+
+  <div class="form-input">
+
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowcontactform.message-error' @ i18n, locale=servicenowcontactform.language}</span>
+    </span>
+
+    <label for="snContact-message">${'servicenowcontactform.message' @ i18n, locale=servicenowcontactform.language} *</label>
+    <textarea id="snContact-message" name="message" rows="4" cols="50" required></textarea>
+  </div>
+  	<sly data-sly-use.recaptcha="../../templates/recaptcha.html" data-sly-call="${recaptcha.invisibleReCaptcha @ callBack='onContactUsSubmit', recaptchaId='ContactUs-recaptcha'}"></sly>
+    <div class="form-submit">
+      <button id="snContact-submit" class="btn large progress-button" data-loading="${'servicenowcontactform.submit.loading' @ i18n, locale=servicenowcontactform.language}" data-finished="${'servicenowcontactform.submit.finished' @ i18n, locale=servicenowcontactform.language}" data-failed="${'servicenowcontactform.submit.failed' @ i18n, locale=servicenowcontactform.language}" data-succeeded="${'servicenowcontactform.submit.succeeded' @ i18n, locale=servicenowcontactform.language}">${'servicenowcontactform.submit' @ i18n, locale=servicenowcontactform.language}</button>
+    </div>
+
+  </form>

@@ -1,0 +1,20 @@
+<div class="content news-content" role="main">
+	<div data-sly-resource="${'cookiealert' @ resourceType='statoil/components/content/cookiealert'}" data-sly-unwrap></div>
+	<div class="news-page article">
+		<div class="header">
+			<h1>${properties.jcr:title}</h1>
+			<div class="date">
+				<div class="date-module" data-sly-use.news="News">
+					<div class="date-module">
+						<span class="date_module-icon fa fa-calendar"></span>
+						<span data-sly-test="${news.created}">${news.created}<span data-sly-test="${news.createdTimeZone}"> ${news.createdTimeZone}</span></span>
+						<span data-sly-test="${!news.created}">Not published</span>
+						<span data-sly-test="${news.lastModified}">| ${'lastModified' @ i18n, locale=news.language} ${news.lastModified} ${news.lastModifiedTimeZone}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-sly-unwrap data-sly-resource="${'par' @ resourceType='statoil/foundation/components/parsys'}"></div>
+	</div>
+	<div data-sly-include="footer.html" data-sly-unwrap></div>
+</div>

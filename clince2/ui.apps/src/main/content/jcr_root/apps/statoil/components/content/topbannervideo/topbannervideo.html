@@ -1,0 +1,13 @@
+<figure class="banner ${topbannervideo.angle}" data-sly-use.topbannervideo="com.statoil.reinvent.components.wcmuse.TopBannerVideo">
+    <video data-sly-attribute.autoplay="${properties.autoplay}" data-sly-attribute.controls="${properties.controls}" data-sly-attribute.loop="${properties.loop}" data-sly-attribute.muted="${properties.muted}" data-sly-attribute.poster="${topbannervideo.posterPath}" style="width: 100%; height: auto; max-height: 100%;">
+        <source src="${properties.source}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <svg id="topbanner-play-button-overlay" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" />
+        <polygon points="75,50 75,150 150,100" />
+    </svg>
+    <div data-sly-test="${!properties.source}">
+        Please specify a source.
+    </div>
+</figure>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="no"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <reports
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.reports"
+            sling:message="Rapporter"/>
+
+    <reports-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.reports-error"
+            sling:message="Vennligst velg en rapport"/>
+
+    <annualreport
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.annualreport"
+            sling:message="Annual Report and Form 20-F"/>
+
+    <statutoryreport
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.statutoryreport"
+            sling:message="Årsrapport for norske myndigheter"/>
+
+    <prospectusreport
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.prospectusreport"
+            sling:message="Prospekt"/>
+
+    <downloadfile
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.downloadfile"
+            sling:message="last ned"/>
+
+    <fullname
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.fullname"
+            sling:message="Ditt navn"/>
+    <fullname-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.fullname-error"
+            sling:message="Vennligst fyll ut ditt navn"/>
+
+    <email
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.email"
+            sling:message="E-post"/>
+
+    <email-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.email-error"
+            sling:message="Vennligst fyll ut din e-post adresse"/>
+
+    <company-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.company-error"
+            sling:message="Vennligst fyll ut ditt firma"/>
+
+    <company
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.company"
+            sling:message="Firma"/>
+
+    <address-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.address-error"
+            sling:message="Vennligst fyll ut din adresse"/>
+
+    <address
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.address"
+            sling:message="Adresse"/>
+
+    <zip-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.zip-error"
+            sling:message="Vennligst fyll ut ditt postnr"/>
+
+    <zip
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.zip"
+            sling:message="Postnr"/>
+
+    <city-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.city-error"
+            sling:message="Vennligst fyll ut ditt sted"/>
+
+    <city
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.city"
+            sling:message="Sted"/>
+
+    <country-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.country-error"
+            sling:message="Vennligst fyll ut ditt land"/>
+
+    <country
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.country"
+            sling:message="Land"/>
+
+    <sendcopy
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.sendcopy"
+            sling:message="Send en kopi av denne bestillingen til min e-post"/>
+
+    <submit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit"
+            sling:message="Bestill trykte eksemplarer i posten"/>
+
+    <submitloading
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit.loading"
+            sling:message="Sender..."/>
+
+    <submitfinished
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit.finished"
+            sling:message="Suksess"/>
+
+    <submitfailed
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit.failed"
+            sling:message="Serverfeil"/>
+
+    <submitsucceeded
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenoworderreports.submit.succeeded"
+            sling:message="Takk!"/>
+
+</jcr:root>

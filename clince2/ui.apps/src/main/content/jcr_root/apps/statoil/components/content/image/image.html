@@ -1,0 +1,23 @@
+<div data-sly-resource="${'.' @ resourceType='statoil/components/content/sectioncontentmodule/anchor'}" data-sly-unwrap="true"></div>
+<div class="component-container ${image.space}" data-sly-use.image="com.statoil.reinvent.components.wcmuse.Image">
+	<figure class="image-content figure-module ${image.type}">
+		<a data-sly-unwrap="${image.type=='icon' || image.type=='circle' || !properties.lightbox}" href="${image.src_large}" class="image-link" title="${properties.jcr:caption}">
+			<img
+					src="${image.src_large}"
+					srcset="${image.src_extrasmall} 100w, ${image.src_small} 768w, ${image.src_medium} 1024w, ${image.src_large} 1537w,${image.src_extralarge} 2000w" sizes="100vw"
+				 	class="${image.classList @ join= ' '}"
+					data-emptytext="Image"
+					alt="${image.alternateText}"
+					title="${properties.jcr:caption}"/>
+			<i data-sly-test="${properties.lightbox}" class="figure-module_expand fa fa-expand"></i>
+		</a>
+
+		<figcaption data-sly-test="${properties.jcr:copyright}" class="figure-module_reference">
+			<span data-sly-test="${image.type!='circle'}" class="figure-module_reference-icon fa fa-camera"></span> ${properties.jcr:copyright}
+		</figcaption>
+
+		<figcaption data-sly-test="${properties.jcr:caption}" class="figure-module_caption">${properties.jcr:caption}</figcaption>
+		<figcaption data-sly-test="${properties.jcr:shortcaption}" class="figure-module_caption">${properties.jcr:shortcaption}</figcaption>
+		<figcaption data-sly-test="${properties.jcr:information}" class="figure-module_information">${properties.jcr:information}</figcaption>
+	</figure>
+</div>

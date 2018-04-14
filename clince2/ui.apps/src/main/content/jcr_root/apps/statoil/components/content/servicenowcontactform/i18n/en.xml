@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+
+    <form-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.form-error"
+            sling:message="There are some errors in your form"/>
+
+    <fullname
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.fullname"
+            sling:message="Your name"/>
+    <fullname-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.fullname-error"
+            sling:message="Please enter your name"/>
+
+    <email
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.email"
+            sling:message="E-mail"/>
+
+    <email-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.email-error"
+            sling:message="Please enter your e-mail address"/>
+
+    <receiver
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.receiver"
+            sling:message="Who are you trying to reach?"/>
+
+    <category
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category"
+            sling:message="Category"/>
+
+    <category-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-error"
+            sling:message="Please select category"/>
+
+    <category-pleaseselect
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-pleaseselect"
+            sling:message="Please select"/>
+
+    <category-askquestion
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-askquestion"
+            sling:message="Ask us a question"/>
+
+    <category-reportwebsiteerror
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-reportwebsiteerror"
+            sling:message="Report an error on our website"/>
+
+    <category-contactstaff
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-contactstaff"
+            sling:message="Contact a department or member of staff"/>
+
+    <category-investorrelations
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-investorrelations"
+            sling:message="Investor Relations"/>
+
+    <category-ethics
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-ethics"
+            sling:message="Ethics"/>
+
+    <category-other
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.category-other"
+            sling:message="Other"/>
+
+    <message
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.message"
+            sling:message="How can we help you?"/>
+
+    <message-error
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.message-error"
+            sling:message="Please let us know how we may help you"/>
+
+    <sendcopy
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.sendcopy"
+            sling:message="Send a copy to my e-mail"/>
+
+    <submit
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit"
+            sling:message="Submit form"/>
+
+    <submitloading
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit.loading"
+            sling:message="Sending..."/>
+
+    <submitfinished
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit.finished"
+            sling:message="Success"/>
+
+    <submitfailed
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit.failed"
+            sling:message="Server Error"/>
+
+    <submitsucceeded
+            jcr:primaryType="sling:MessageEntry"
+            jcr:mixinTypes="[sling:Message]"
+            sling:key="servicenowcontactform.submit.succeeded"
+            sling:message="Thank You!"/>
+
+</jcr:root>

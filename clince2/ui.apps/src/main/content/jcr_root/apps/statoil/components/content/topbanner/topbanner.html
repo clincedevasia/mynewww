@@ -1,0 +1,17 @@
+<header class="banner-top ${topbanner.backgroundColor} ${topbanner.mode=='video' ? 'banner-video':''}" data-sly-use.topbanner="com.statoil.reinvent.components.wcmuse.Topbanner">
+	<div data-sly-test="${topbanner.mode=='banner' || !topbanner.mode}" data-sly-resource="${'banner' @ resourceType='statoil/components/content/banner'}" data-sly-unwrap="true"></div>
+	<div data-sly-test="${topbanner.mode=='video'}" data-sly-resource="${'banner' @ resourceType='statoil/components/content/topbannervideo'}" data-sly-unwrap="true"></div>
+	<div data-sly-test="${topbanner.mode=='carousel'}" data-sly-resource="${'topcarousel' @ resourceType='statoil/components/content/topcarousel'}" class="topcarousel"></div>
+	<div data-sly-test="${topbanner.mode=='map'}" data-sly-resource="${'map' @ resourceType='statoil/components/content/map'}" data-sly-unwrap="true"></div>
+	<div class="banner-top-colctrl"
+		 data-sly-test="${topbanner.rendered && !wcmmode.edit}"
+		 data-sly-resource="${'par' @ resourceType='foundation/components/parsys'}">
+	</div>
+</header>
+
+<div class="banner-top-colctrl ${wcmmode.edit ? 'edit' : ''}"
+	 data-sly-use.topbanner="com.statoil.reinvent.components.wcmuse.Topbanner"
+	 data-sly-test="${topbanner.rendered && wcmmode.edit}"
+	 data-sly-resource="${'par' @ resourceType='foundation/components/parsys'}"></div>
+
+<div class="content-separator" data-sly-test="${wcmmode.edit}">ADD CONTENT BELOW THIS SEPARATOR</div>

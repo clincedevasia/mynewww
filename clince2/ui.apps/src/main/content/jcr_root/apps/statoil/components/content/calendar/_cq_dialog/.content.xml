@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Calendar"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="en/cq/current/wcm/default_components.html">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Title"
+                        name="./title"/>
+                    <viewMode
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="View Mode"
+                        name="./viewMode">
+                        <items jcr:primaryType="nt:unstructured">
+                            <list
+                                jcr:primaryType="nt:unstructured"
+                                text="List"
+                                value="list-view"/>
+                            <tiles
+                                jcr:primaryType="nt:unstructured"
+                                text="Tiles"
+                                value="tiles-view"/>
+                        </items>
+                    </viewMode>
+                    <search
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Search"
+                        name="./search">
+                        <items jcr:primaryType="nt:unstructured">
+                            <enabled
+                                jcr:primaryType="nt:unstructured"
+                                text="Enabled"
+                                value="enabled"/>
+                            <disabled
+                                jcr:primaryType="nt:unstructured"
+                                text="Disabled"
+                                value="disabled"/>
+                        </items>
+                    </search>
+                    <filter
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Filter"
+                        name="./filter">
+                        <items jcr:primaryType="nt:unstructured">
+                            <enabled
+                                jcr:primaryType="nt:unstructured"
+                                text="Enabled"
+                                value="enabled"/>
+                            <disabled
+                                jcr:primaryType="nt:unstructured"
+                                text="Disabled"
+                                value="disabled"/>
+                        </items>
+                    </filter>
+                    <spaceBelow
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Space Below"
+                        name="./spaceBelow">
+                        <items jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                text="(default)"
+                                value=""/>
+                            <none
+                                jcr:primaryType="nt:unstructured"
+                                text="None"
+                                value="space-below_none"/>
+                            <normal
+                                jcr:primaryType="nt:unstructured"
+                                text="Normal"
+                                value="space-below_normal"/>
+                            <big
+                                jcr:primaryType="nt:unstructured"
+                                text="Big"
+                                value="space-below_big"/>
+                        </items>
+                    </spaceBelow>
+                    <events
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/apps/statoil/components/commons/multifield"
+                        fieldDescription="Click 'Add Field' to add an event"
+                        fieldLabel="Events">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./events">
+                            <items jcr:primaryType="nt:unstructured">
+                                <title
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Title"
+                                    name="./title"
+                                    required="true"/>
+                                <readMore
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                                    fieldDescription="Page displayed when clicking 'Read More'"
+                                    fieldLabel="Read More"
+                                    name="./readMore"
+                                    rootPath="/content"/>
+                                <location
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Location"
+                                    name="./location"
+                                    required="true"/>
+                                <start
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                    fieldLabel="Start"
+                                    name="./start"
+                                    type="datetime"/>
+                                <end
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                    fieldLabel="End"
+                                    name="./end"
+                                    type="datetime"/>
+                                <timezone
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="Time Zone"
+                                    name="./timeZone">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <none
+                                            jcr:primaryType="nt:unstructured"
+                                            text="None"
+                                            value=""/>
+                                        <utc-canada
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC -7 Canada"
+                                            value="utc-7canada"/>
+                                        <utc-usa-houston
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC -6 United States Houston"
+                                            value="utc-6united-states-houston"/>
+                                        <utc-usa-washington
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC -5 United States Washington DC"
+                                            value="utc-5united-states-washington-dc"/>
+                                        <utc-brazil
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC -3 Brazil"
+                                            value="utc-3brazil"/>
+                                        <utc-uk
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC +0 United Kingdom"
+                                            value="utc+0united-kingdom"/>
+                                        <utc-norge
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC +1 Norway"
+                                            value="utc+1norway"/>
+                                        <utc-angola
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC +1 Angola, Nigeria"
+                                            value="utc+1angola-nigeria"/>
+                                        <utc-tanzania
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC +3 Tanzania"
+                                            value="utc+3tanzania"/>
+                                        <utc-azerbaijan-baku
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC +4 Azerbaijan, Baku"
+                                            value="utc+4azerbaijan-baku"/>
+                                        <utc-australia-perth
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC +8 Australia, Perth"
+                                            value="utc+8australia-perth"/>
+                                        <utc-south-korea
+                                            jcr:primaryType="nt:unstructured"
+                                            text="UTC +9 South Korea"
+                                            value="utc+9south-korea"/>
+                                    </items>
+                                </timezone>
+                            </items>
+                        </field>
+                    </events>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,485 @@
+<form id="snSupplyChain" class="statoil-form" method="post" data-sly-use.servicenowsupplychain="com.statoil.reinvent.components.wcmuse.ServiceNowSupplyChain" data-abide="ajax" novalidate>
+
+  <h2 data-sly-test="${properties.heading}">${properties.heading}</h2>
+
+  <div data-abide-error style="display: none;">
+    <p>${'servicenowsupplychain.form-error' @ i18n, locale=servicenowsupplychain.language}</p>
+  </div>
+
+  <div class="section-divider">
+    <h3>1. ${'servicenowsupplychain.contactdetails' @ i18n, locale=servicenowsupplychain.language} *</h3>
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsupplychain.company-error' @ i18n, locale=servicenowsupplychain.language}</span>
+    </span>
+
+    <label for="snSupplyChain-company">${'servicenowsupplychain.company' @ i18n, locale=servicenowsupplychain.language}</label>
+    <input id="snSupplyChain-company" type="text" name="company" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsupplychain.contactperson-error' @ i18n, locale=servicenowsupplychain.language}</span>
+    </span>
+
+    <label for="snSupplyChain-contactPerson">${'servicenowsupplychain.contactperson' @ i18n, locale=servicenowsupplychain.language}</label>
+    <input id="snSupplyChain-contactPerson" type="text" name="contactPerson" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsupplychain.country-error' @ i18n, locale=servicenowsupplychain.language}</span>
+    </span>
+
+    <label for="snSupplyChain-country">${'servicenowsupplychain.country' @ i18n, locale=servicenowsupplychain.language}</label>
+    <input id="snSupplyChain-country" type="text" name="country" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsupplychain.email-error' @ i18n, locale=servicenowsupplychain.language}</span>
+    </span>
+
+    <label for="snSupplyChain-email">${'servicenowsupplychain.email' @ i18n, locale=servicenowsupplychain.language}</label>
+    <input id="snSupplyChain-email" type="email" name="email" required />
+  </div>
+
+  <div class="form-input">
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsupplychain.telephone-error' @ i18n, locale=servicenowsupplychain.language}</span>
+    </span>
+
+    <label for="snSupplyChain-telephone">${'servicenowsupplychain.telephone' @ i18n, locale=servicenowsupplychain.language}</label>
+    <input id="snSupplyChain-telephone" type="tel" name="telephone" required />
+  </div>
+
+  <div class="section-divider">
+    <h3>2. ${'servicenowsupplychain.contactreason' @ i18n, locale=servicenowsupplychain.language} *</h3>
+  </div>
+
+  <div class="form-input">
+    <label for="snSupplyChain-category" class="visually-hidden">${'servicenowsupplychain.category' @ i18n, locale=servicenowsupplychain.language}</label>
+    <select id="snSupplyChain-category" name="category">
+        <option value="provideCompanyInformation">${'servicenowsupplychain.category-providecompanyinformation' @ i18n, locale=servicenowsupplychain.language}</option>
+        <option value="contactPersonnel">${'servicenowsupplychain.category-contactpersonnel' @ i18n, locale=servicenowsupplychain.language}</option>
+        <option value="questions">${'servicenowsupplychain.category-questions' @ i18n, locale=servicenowsupplychain.language}</option>
+        <option value="other">${'servicenowsupplychain.category-other' @ i18n, locale=servicenowsupplychain.language}</option>
+    </select>
+  </div>
+
+
+  <div class="section-divider">
+    <h3>3. ${'servicenowsupplychain.geolocation' @ i18n, locale=servicenowsupplychain.language} *</h3>
+  </div>
+
+  <div class="checkbox-wrapper">
+
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsupplychain.geolocation-error' @ i18n, locale=servicenowsupplychain.language}</span>
+    </span>
+
+    <div class="column">
+
+      <div class="checkbox">
+        <input id="snSupplyChain-worldwide" type="checkbox" value="worldwide">
+        <label for="snSupplyChain-worldwide">${'servicenowsupplychain.location-worldwide' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-algeria" type="checkbox" value="algeria">
+        <label for="snSupplyChain-algeria">${'servicenowsupplychain.location-algeria' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-angola" type="checkbox" value="angola">
+        <label for="snSupplyChain-angola">${'servicenowsupplychain.location-angola' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-australia" type="checkbox" value="australia">
+        <label for="snSupplyChain-australia">${'servicenowsupplychain.location-australia' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-azerbaijan" type="checkbox" value="azerbaijan">
+        <label for="snSupplyChain-azerbaijan">${'servicenowsupplychain.location-azerbaijan' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-bahamas" type="checkbox" value="bahamas">
+        <label for="snSupplyChain-bahamas">${'servicenowsupplychain.location-bahamas' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-belgium" type="checkbox" value="belgium">
+        <label for="snSupplyChain-belgium">${'servicenowsupplychain.location-belgium' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-brazil" type="checkbox" value="brazil">
+        <label for="snSupplyChain-brazil">${'servicenowsupplychain.location-brazil' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-china" type="checkbox" value="china">
+        <label for="snSupplyChain-china">${'servicenowsupplychain.location-china' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-colombia" type="checkbox" value="colombia">
+        <label for="snSupplyChain-colombia">${'servicenowsupplychain.location-colombia' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-denmark" type="checkbox" value="denmark">
+        <label for="snSupplyChain-denmark">${'servicenowsupplychain.location-denmark' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-germany" type="checkbox" value="germany">
+        <label for="snSupplyChain-germany">${'servicenowsupplychain.location-germany' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+    </div>
+
+    <div class="column">
+
+      <div class="checkbox">
+        <input id="snSupplyChain-greenland" type="checkbox" value="greenland">
+        <label for="snSupplyChain-greenland">${'servicenowsupplychain.location-greenland' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-india" type="checkbox" value="india">
+        <label for="snSupplyChain-india">${'servicenowsupplychain.location-india' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-indonesia" type="checkbox" value="indonesia">
+        <label for="snSupplyChain-indonesia">${'servicenowsupplychain.location-indonesia' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-ireland" type="checkbox" value="ireland">
+        <label for="snSupplyChain-ireland">${'servicenowsupplychain.location-ireland' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-libya" type="checkbox" value="libya">
+        <label for="snSupplyChain-libya">${'servicenowsupplychain.location-libya' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-mozambique" type="checkbox" value="mozambique">
+        <label for="snSupplyChain-mozambique">${'servicenowsupplychain.location-mozambique' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-myanmar" type="checkbox" value="myanmar">
+        <label for="snSupplyChain-myanmar">${'servicenowsupplychain.location-myanmar' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-netherlands" type="checkbox" value="netherlands">
+        <label for="snSupplyChain-netherlands">${'servicenowsupplychain.location-netherlands' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-newzealand" type="checkbox" value="newzealand">
+        <label for="snSupplyChain-newzealand">${'servicenowsupplychain.location-newzealand' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-nicaragua" type="checkbox" value="nicaragua">
+        <label for="snSupplyChain-nicaragua">${'servicenowsupplychain.location-nicaragua' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-nigeria" type="checkbox" value="nigeria">
+        <label for="snSupplyChain-nigeria">${'servicenowsupplychain.location-nigeria' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-norway" type="checkbox" value="norway">
+        <label for="snSupplyChain-norway">${'servicenowsupplychain.location-norway' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+    </div>
+
+    <div class="column">
+
+      <div class="checkbox">
+        <input id="snSupplyChain-northamerica" type="checkbox" value="northamerica">
+        <label for="snSupplyChain-northamerica">${'servicenowsupplychain.location-unitedstates' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-russia" type="checkbox" value="russia">
+        <label for="snSupplyChain-russia">${'servicenowsupplychain.location-russia' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-singapore" type="checkbox" value="singapore">
+        <label for="snSupplyChain-singapore">${'servicenowsupplychain.location-singapore' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-southafrica" type="checkbox" value="southafrica">
+        <label for="snSupplyChain-southafrica">${'servicenowsupplychain.location-southafrica' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-southkorea" type="checkbox" value="southkorea">
+        <label for="snSupplyChain-southkorea">${'servicenowsupplychain.location-southkorea' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-suriname" type="checkbox" value="suriname">
+        <label for="snSupplyChain-suriname">${'servicenowsupplychain.location-suriname' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-tanzania" type="checkbox" value="tanzania">
+        <label for="snSupplyChain-tanzania">${'servicenowsupplychain.location-tanzania' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-turkey" type="checkbox" value="turkey">
+        <label for="snSupplyChain-turkey">${'servicenowsupplychain.location-tanzania' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-unitedarabemirates" type="checkbox" value="unitedarabemirates">
+        <label for="snSupplyChain-unitedarabemirates">${'servicenowsupplychain.location-unitedarabemirates' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-unitedkingdom" type="checkbox" value="unitedkingdom">
+        <label for="snSupplyChain-unitedkingdom">${'servicenowsupplychain.location-unitedkingdom' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-uruguay" type="checkbox" value="uruguay">
+        <label for="snSupplyChain-uruguay">${'servicenowsupplychain.location-uruguay' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-venezuela" type="checkbox" value="venezuela">
+        <label for="snSupplyChain-venezuela">${'servicenowsupplychain.location-venezuela' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="form-input narrow">
+    <label for="snSupplyChain-locationOther">${'servicenowsupplychain.location-other' @ i18n, locale=servicenowsupplychain.language}</label>
+    <input id="snSupplyChain-locationOther" type="text" name="other"/>
+  </div>
+
+
+  <div class="section-divider">
+    <h3>4. ${'servicenowsupplychain.segment' @ i18n, locale=servicenowsupplychain.language} *</h3>
+  </div>
+
+  <div class="checkbox-wrapper">
+
+    <span class="form-error">
+      <span class="fa fa-exclamation-circle" aria-hidden="true"></span>
+      <span class="error-message">${'servicenowsupplychain.segment-error' @ i18n, locale=servicenowsupplychain.language}</span>
+    </span>
+
+    <div class="column">
+      <div class="checkbox">
+        <input id="snSupplyChain-procurementsupport" type="checkbox" value="procurementsupport">
+        <label for="snSupplyChain-procurementsupport">${'servicenowsupplychain.procurementsupport' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-equipmentsafety" type="checkbox" value="equipmentsafety">
+        <label for="snSupplyChain-equipmentsafety">${'servicenowsupplychain.equipmentsafety' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-logistics" type="checkbox" value="logistics">
+        <label for="snSupplyChain-logistics">${'servicenowsupplychain.logistics' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-drilling" type="checkbox" value="drilling">
+        <label for="snSupplyChain-drilling">${'servicenowsupplychain.drilling' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-completion" type="checkbox" value="completion">
+        <label for="snSupplyChain-completion">${'servicenowsupplychain.completion' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-intervention" type="checkbox" value="intervention">
+        <label for="snSupplyChain-intervention">${'servicenowsupplychain.intervention' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-xmt" type="checkbox" value="xmt">
+        <label for="snSupplyChain-xmt">${'servicenowsupplychain.xmt' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-drillingfixed" type="checkbox" value="drillingfixed">
+        <label for="snSupplyChain-drillingfixed">${'servicenowsupplychain.drillingfixed' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-cement" type="checkbox" value="cement">
+        <label for="snSupplyChain-cement">${'servicenowsupplychain.cement' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-rig" type="checkbox" value="rig">
+        <label for="snSupplyChain-rig">${'servicenowsupplychain.rig' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+    </div>
+
+    <div class="column">
+
+      <div class="checkbox">
+        <input id="snSupplyChain-rov" type="checkbox" value="rov">
+        <label for="snSupplyChain-rov">${'servicenowsupplychain.rov' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-geoscience" type="checkbox" value="geoscience">
+        <label for="snSupplyChain-geoscience">${'servicenowsupplychain.geoscience' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-research-1" type="checkbox" value="research-1">
+        <label for="snSupplyChain-research-1">${'servicenowsupplychain.research-1' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-research-2" type="checkbox" value="research-2">
+        <label for="snSupplyChain-research-2">${'servicenowsupplychain.research-2' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-research-3" type="checkbox" value="research-3">
+        <label for="snSupplyChain-research-3">${'servicenowsupplychain.research-3' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-drillingsupply" type="checkbox" value="drillingsupply">
+        <label for="snSupplyChain-drillingsupply">${'servicenowsupplychain.drillingsupply' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-equipment" type="checkbox" value="equipment">
+        <label for="snSupplyChain-equipment">${'servicenowsupplychain.equipment' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-subseamarine" type="checkbox" value="subseamarine">
+        <label for="snSupplyChain-subseamarine">${'servicenowsupplychain.subseamarine' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-transportation" type="checkbox" value="transportation">
+        <label for="snSupplyChain-transportation">${'servicenowsupplychain.transportation' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-linepipe" type="checkbox" value="linepipe">
+        <label for="snSupplyChain-linepipe">${'servicenowsupplychain.linepipe' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+    </div>
+
+    <div class="column">
+
+      <div class="checkbox">
+        <input id="snSupplyChain-subseavalves" type="checkbox" value="subseavalves">
+        <label for="snSupplyChain-subseavalves">${'servicenowsupplychain.subseavalves' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-studies" type="checkbox" value="studies">
+        <label for="snSupplyChain-studies">${'servicenowsupplychain.studies' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-valves" type="checkbox" value="valves">
+        <label for="snSupplyChain-valves">${'servicenowsupplychain.valves' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-cranes" type="checkbox" value="cranes">
+        <label for="snSupplyChain-cranes">${'servicenowsupplychain.cranes' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-rotatingequipment" type="checkbox" value="rotatingequipment">
+        <label for="snSupplyChain-rotatingequipment">${'servicenowsupplychain.rotatingequipment' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-electroautomation" type="checkbox" value="electroautomation">
+        <label for="snSupplyChain-electroautomation">${'servicenowsupplychain.electroautomation' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-businessupport" type="checkbox" value="businessupport">
+        <label for="snSupplyChain-businessupport">${'servicenowsupplychain.businessupport' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-omm" type="checkbox" value="omm">
+        <label for="snSupplyChain-omm">${'servicenowsupplychain.omm' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+      <div class="checkbox">
+        <input id="snSupplyChain-subsea" type="checkbox" value="subsea">
+        <label for="snSupplyChain-subsea">${'servicenowsupplychain.subsea' @ i18n, locale=servicenowsupplychain.language}</label>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="section-divider">
+    <h3>5. ${'servicenowsupplychain.keywordsheader' @ i18n, locale=servicenowsupplychain.language}</h3>
+  </div>
+
+  <div class="form-input">
+    <label for="snSupplyChain-keywords" class="visually-hidden">${'servicenowsupplychain.keywords' @ i18n, locale=servicenowsupplychain.language}</label>
+    <textarea id="snSupplyChain-keywords" rows="2" cols="50"></textarea>
+  </div>
+
+  <div class="section-divider">
+    <h3>6. ${'servicenowsupplychain.commentsheader' @ i18n, locale=servicenowsupplychain.language}</h3>
+  </div>
+
+  <div class="form-input">
+    <label for="snSupplyChain-comments" class="visually-hidden">${'servicenowsupplychain.comments' @ i18n, locale=servicenowsupplychain.language}</label>
+    <textarea id="snSupplyChain-comments" rows="4" cols="50"></textarea>
+  </div>
+
+  <div class="checkbox-wrapper">
+    <div class="checkbox">
+      <input id="snSupplyChain-supportingDocuments" type="checkbox" value="supportingDocuments">
+      <label for="snSupplyChain-supportingDocuments">${'servicenowsupplychain.supportingdocuments' @ i18n, locale=servicenowsupplychain.language}</label>
+    </div>
+  </div>
+
+  <div class="form-submit">
+    <button id="snSupplyChain-submit" class="btn large magazine">${'servicenowsupplychain.submit' @ i18n, locale=servicenowsupplychain.language}</button>
+  </div>
+
+</form>

@@ -1,0 +1,74 @@
+<div class="component-container ${calendar.spaceBelow}" data-sly-use.calendar="com.statoil.reinvent.components.wcmuse.Calendar">
+<section class="calendar-container" id="calendar-component">
+
+  <header class="calendar-header search-enabled" data-sly-test="${calendar.search == 'enabled'}">
+    <h1 data-sly-test="${calendar.title}">${calendar.title}</h1>
+    <h1 data-sly-test="${!calendar.title && wcmmode.edit}">Calendar Placeholder</h1>
+    <input id="calendar-search"  class="search" type="search" placeholder="${'search' @ i18n, locale=calendar.locale}" />
+    <label id="calendar-search-label" for="calendar-search">${'searchLabel' @ i18n, locale=calendar.locale}</label>
+  </header>
+
+  <header class="calendar-header" data-sly-test="${calendar.search == 'disabled' && calendar.title}">
+    <h1 data-sly-test="${calendar.title}">${calendar.title}</h1>
+  </header>
+
+  <header class="calendar-header" data-sly-test="${wcmmode.edit && !calendar.title && calendar.search == 'disabled'}">
+    <h1>Calendar Placeholder</h1>
+  </header>
+
+  <div class="tags-container" data-sly-test="${calendar.filter == 'enabled'}">
+    <div class="type" data-sly-test="${calendar.tags}">
+      <span class="label">${'byType' @ i18n, locale=calendar.locale}</span>
+      <div data-sly-list="${calendar.tags}" data-sly-unwrap="true">
+        <button class="tag" data-tag="${item}">
+          ${item}<!--/* <span class="tag-count">123</span> */-->
+        </button>
+      </div>
+    </div>
+
+    <div class="country" data-sly-test="${calendar.countries}">
+      <span class="label">${'byCountry' @ i18n, locale=calendar.locale}</span>
+      <div data-sly-list="${calendar.countries}" data-sly-unwrap="true">
+        <button class="tag" data-tag="${item}">
+          ${item}<!--/* <span class="tag-count">123</span> */-->
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="events-container list ${calendar.viewMode}" data-sly-list="${calendar.events}">
+
+    <article class="calendar-item" data-tags="${item.tags @ join=';'}">
+
+      <header>
+        <div class="event-date">
+          <div class="date-container">
+            <span class="day">${item.startDay}</span>
+            <span class="month">${item.startMonth}</span>
+          </div>
+        </div>
+
+        <div class="event-title">
+          <h2 class="title">${item.title}</h2>
+          <div class="meta">
+            <span class="eventtype">${item.tags @ join=', '}</span>
+            <span class="read-more" data-sly-test="${item.readMore}"><a class="btn large list inverse-panel" href="${item.readMore}.html">${'readMore' @ i18n, locale=calendar.locale}</a></span>
+          </div>
+        </div>
+      </header>
+
+      <footer>
+        <div class="meta">
+          <span class="location" data-sly-test="${item.location}"><span class="fa fa-map-marker" aria-hidden="true"></span> <span class="itemlocation">${item.location}</span></span>
+          <span class="time"><span class="fa fa-clock-o" aria-hidden="true"></span>${item.startTime} - ${item.endTime} ${item.timeZone  @ i18n, locale=calendar.locale}</span>
+          <span class="add-event"><span class="fa fa-calendar-o" aria-hidden="true"></span><a href="${item.url}">${'addToCalendar' @ i18n, locale=calendar.locale}</a></span>       
+          <span class="read-more" data-sly-test="${item.readMore}"><a class="btn large list inverse-panel" href="${item.readMore}.html">${'readMore' @ i18n, locale=calendar.locale}</a></span>
+        </div>
+      </footer>
+
+    </article>
+
+  </div>
+
+</section>
+</div>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Statoil Page"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[cq.common.wcm,core.wcm.page.properties,cq.wcm.msm.properties]"
+    mode="edit">
+    <content
+        granite:class="cq-dialog-content-page"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                granite:class="cq-siteadmin-admin-properties-tabs"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                size="L">
+                <items jcr:primaryType="nt:unstructured">
+                    <statoil
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Statoil"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <features
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Features"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <usecdn
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./usecdn"
+                                                text="Use CDN"
+                                                value="true"/>
+                                            <cdnurl
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="CDN url"
+                                                name="./cdnurl"/>
+                                            <disablelang
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./disableLanguage"
+                                                text="Disable Language"
+                                                value="true"/>
+                                            <disablesearch
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./disableSearch"
+                                                text="Disable search"
+                                                value="true"/>
+                                        </items>
+                                    </features>
+                                    <cookiealert
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Cookie alert"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <cookiealertmessage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Cookie alert message"
+                                                fieldLabel="Cookie alert message"
+                                                name="./cookieMessage"/>
+                                        </items>
+                                    </cookiealert>
+                                    <metaTags
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Meta Tags"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <metaTagsRobots
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Controls the behavior of search engine crawling and indexing of the site"
+                                                fieldLabel="Robots"
+                                                name="./metaTagsRobots"/>
+                                        </items>
+                                    </metaTags>
+                                </items>
+                            </column>
+                        </items>
+                    </statoil>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

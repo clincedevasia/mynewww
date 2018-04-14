@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:description="Generic template for Statoil News Room"
+          jcr:primaryType="cq:Template"
+          jcr:title="Statoil News Room"
+          allowedPaths="[/content(/.*)?]"
+          ranking="{Long}90">
+    <jcr:content
+            cq:allowedTemplates="[/apps/statoil/templates/news,/apps/statoil/templates/panel,/apps/statoil/templates/redirect]"
+            cq:designPath="/etc/designs/statoil"
+            jcr:primaryType="cq:PageContent"
+            sling:resourceType="statoil/components/page/newsroom">
+        <par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys"/>
+    </jcr:content>
+</jcr:root>

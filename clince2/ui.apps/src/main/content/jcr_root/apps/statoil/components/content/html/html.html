@@ -1,0 +1,4 @@
+<sly data-sly-use.authoringUtils="/libs/wcm/foundation/components/utils/AuthoringUtils.js">
+    <div data-sly-test="${wcmmode.edit && properties.code == null && authoringUtils.isTouch}" class="cq-placeholder" data-emptytext="Source Code"></div>
+    ${properties.code @ context='scriptComment'}
+</sly>

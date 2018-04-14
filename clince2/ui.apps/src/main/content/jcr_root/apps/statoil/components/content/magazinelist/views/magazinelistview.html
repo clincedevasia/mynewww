@@ -1,0 +1,31 @@
+<template data-sly-template.magazineViewPageList="${@ list}">
+    <ul class="magazine-list-container" data-sly-list.magazineListViewModel="${list.filteredList}">
+        <li class="magazine-list-item" data-id="${magazineListViewModel}">
+			 <!--/*dispaly image*/-->
+            <div class="magazine-image">
+                <a href="${magazineListViewModel.linkModel.link}">
+                    <div class="magazine-image-inner" style="background-image:url(${magazineListViewModel.imageModel.imageSrc@context='uri'}.transform/magazine-list/image.jpg)">
+
+                    
+                        <!-- <img src="${magazineListViewModel.imageModel.imageSrc}.transform/magazine-list/image.jpg" alt="${magazineListViewModel.imageModel.altText}" width="600"/><br> -->
+                    
+                    </div>
+                </a>
+            </div>
+            <div class="magazine-list-content">
+
+                <!--/*created date*/-->
+                <div class="publish-date capitalize-text"> ${'MMMM dd yyyy' @ format=magazineListViewModel.lastModified, locale= magazineList.locale.language}</div>
+                
+                <!--/*title text*/-->
+                <p>${magazineListViewModel.linkModel.title}</p>
+                
+                <!--/*read more button*/-->
+                <a data-emptytext="Button" class="btn large default" href="${magazineListViewModel.linkModel.link}">
+                    ${properties.readMoreText ? properties.readMoreText : 'Full Story' }
+                    <span class="button-arrow"></span>
+                </a>
+            </div>
+        </li>
+    </ul>
+</template>

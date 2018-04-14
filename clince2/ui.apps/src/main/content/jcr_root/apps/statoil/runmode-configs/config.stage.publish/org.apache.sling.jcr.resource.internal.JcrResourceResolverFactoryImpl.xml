@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    resource.resolver.allowDirect="{Boolean}true"
+    resource.resolver.manglenamespaces="{Boolean}true"
+    resource.resolver.map.location="/etc/map.stage.publish"
+    resource.resolver.mapping="[/content/statoil/:/,/-/]"
+    resource.resolver.searchpath="[/apps,/libs,/apps/foundation/components/primary,/libs/foundation/components/primary]"
+    resource.resolver.vanity.precedence="{Boolean}true"/>

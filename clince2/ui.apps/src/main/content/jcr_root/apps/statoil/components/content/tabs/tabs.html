@@ -1,0 +1,31 @@
+<div class="component-container ${tabs.space}" data-sly-use.tabs="com.statoil.reinvent.components.wcmuse.Tabs">
+	<div data-sly-test="${wcmmode.edit}" data-sly-unwrap>
+    <div class="edit-info" data-sly-test="${!tabs.tabListing}">
+      <span class="fa fa-info-circle"></span> Edit Tab Container Component
+    </div>
+  </div>
+
+  <ul class="tabs" data-sly-list.tabs="${tabs.tabListing}">
+		<li class="tab active" data-sly-test="${tabsList.first}">
+			<a data-toggle="tab" data-target="#${tabs}">${tabs}</a>
+		</li>
+		<li class="tab" data-sly-test="${!tabsList.first}">
+			<a data-toggle="tab" data-target="#${tabs}">${tabs}</a>
+		</li>
+	</ul>
+
+  <div class="tab-content" data-sly-list.tabs="${tabs.tabListing}">
+		<div id="${tabs}" class="tab-pane open" data-sly-test="${tabsList.first}">
+      <div class="edit-info" data-sly-test="${wcmmode.edit}">
+        <span class="fa fa-info-circle"></span> Place contents for tab ${tabs}
+      </div>
+      <div data-sly-resource="${ tabs @ resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+		</div>
+		<div id="${tabs}" class="${wcmmode.edit ? 'tab-pane open':'tab-pane'}" data-sly-test="${!tabsList.first}">
+      <div class="edit-info" data-sly-test="${wcmmode.edit}">
+        <span class="fa fa-info-circle"></span> Place contents for tab ${tabs}
+      </div>
+      <div data-sly-resource="${ tabs @ resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+		</div>
+  </div>
+</div>

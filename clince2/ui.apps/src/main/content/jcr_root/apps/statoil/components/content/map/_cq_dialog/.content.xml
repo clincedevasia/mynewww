@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Map"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <map
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Map"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <center
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="The initial map center. Specified as latitude and longitude, e.g. 58.891993, 5.717554."
+                                fieldLabel="Center"
+                                name="./center"
+                                required="true"/>
+                            <zoom
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                defaultValue="11"
+                                fieldDescription="The initial resolution at which to display the map"
+                                fieldLabel="Zoom"
+                                max="20"
+                                min="0"
+                                name="./zoom"
+                                required="true"/>
+                            <mapType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Indicates whether to display the map type control"
+                                fieldLabel="Map Type"
+                                name="./mapType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <true
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="{Boolean}true"
+                                        text="Yes"
+                                        value="true"/>
+                                    <false
+                                        jcr:primaryType="nt:unstructured"
+                                        text="No"
+                                        value="false"/>
+                                </items>
+                            </mapType>
+                            <streetView
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Indicates whether to display the street view control"
+                                fieldLabel="Street View"
+                                name="./streetView">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <true
+                                        jcr:primaryType="nt:unstructured"
+                                        selected="{Boolean}true"
+                                        text="Yes"
+                                        value="true"/>
+                                    <false
+                                        jcr:primaryType="nt:unstructured"
+                                        text="No"
+                                        value="false"/>
+                                </items>
+                            </streetView>
+                            <theme
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Snazzy Maps theme"
+                                fieldLabel="Theme"
+                                name="./theme">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Google Maps Default"
+                                        value=""/>
+                                    <bobbysWorld
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Bobby's World"
+                                        value="BobbysWorld"/>
+                                    <mostlyGrayscale
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Mostly Grayscale"
+                                        value="MostlyGrayscale"/>
+                                    <routeXl
+                                        jcr:primaryType="nt:unstructured"
+                                        text="RouteXL"
+                                        value="RouteXL"/>
+                                </items>
+                            </theme>
+                            <angle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Angle"
+                                name="./angle">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <top
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Top"
+                                        value="top"/>
+                                    <bottom
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Bottom"
+                                        value="bottom"/>
+                                    <both
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Both"
+                                        value="both"/>
+                                </items>
+                            </angle>
+                            <anglecolor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Angle color"
+                                name="./anglecolor">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <none
+                                        jcr:primaryType="nt:unstructured"
+                                        text="None"
+                                        value=""/>
+                                    <top
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Top"
+                                        value="top"/>
+                                    <bottom
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Bottom"
+                                        value="bottom"/>
+                                    <both
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Both"
+                                        value="both"/>
+                                </items>
+                            </anglecolor>
+                            <markers
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/apps/statoil/components/commons/multifield"
+                                fieldDescription="Click 'Add Field' to add a marker"
+                                fieldLabel="Markers">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./markers">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Title"
+                                                    name="./title"
+                                                    required="true"/>
+                                                <location
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="Location of the marker. Specified as latitude and longitude, e.g. 58.891993, 5.717554."
+                                                    fieldLabel="Location"
+                                                    name="./location"
+                                                    required="true"/>
+                                                <content
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="Content to be displayed when clicking the marker."
+                                                    fieldLabel="Content"
+                                                    name="./content"
+                                                    required="true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </markers>
+                        </items>
+                    </column>
+                </items>
+            </map>
+        </items>
+    </content>
+</jcr:root>

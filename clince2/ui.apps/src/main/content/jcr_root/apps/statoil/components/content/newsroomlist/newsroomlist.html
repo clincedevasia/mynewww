@@ -1,0 +1,54 @@
+<div data-sly-unwrap
+     data-sly-use.newsRoomList="com.statoil.reinvent.components.wcmuse.NewsRoomList"
+     data-sly-use.emptyRenderer="emptylist.html"
+     data-sly-use.itemTemplate="listitem.html">
+    <div data-sly-call="${emptyRenderer.emptylisttemplate @ list=newsRoomList}" data-sly-unwrap></div>
+
+    <div class="colctrl wrapper default cq-colctrl-default">
+      <div class="parsys_column default cq-colctrl-default">
+        <div class="parsys_column default cq-colctrl-default-c0">
+
+          <div class="list-container" id="${newsRoomList.nodeName}" data-nodepath="${newsRoomList.nodePath}">
+              <div class="tags-filter" data-is-tag-count-enabled="${properties.istagCountEnabled}">
+                  <div data-sly-list.tagItem="${newsRoomList.tags}" data-sly-unwrap>
+                      <button class="tag-filter" data-tag="${tagItem}">
+                          ${tagItem}
+						  <sly data-sly-test="${properties.istagCountEnabled == 'true'}">
+                          	<span class="tag-filter-count"></span>
+                          </sly>
+                      </button>
+                  </div>
+              </div>
+
+            <div class="search-and-sort">
+
+              <div class="sort-options-container">
+                <select data-sly-test="${newsRoomList.years}" class="list-year-filter" name="year" tabindex="0">
+                    <option value="">${'search.latest' @ i18n, locale=newsRoomList.language}</option>
+                    <div data-sly-list.yearItem="${newsRoomList.years}" data-sly-unwrap>
+                        <option value="${yearItem}" selected="${newsRoomList.year == yearItem}">${yearItem}</option>
+                    </div>
+                </select>
+                <input type="hidden" name="offset" value="${newsRoomList.offset}">
+              </div>
+
+              <div class="list-search-container">
+                <input id="newsroom-search" class="search" type="search" placeholder="${'list.search' @ i18n, locale=newsRoomList.language}" name="query">
+                <label id="newsroom-search-label" for="newsroom-search">Search for relevant content in the news room</label>
+              </div>
+
+            </div>
+              <div class="loading-indicator">
+                <span class="fa fa-spinner fa-spin"></span>
+              </div>
+
+              <span class="queried" data-template="${'list.searchFor' @ i18n, locale=newsRoomList.language} {}" data-query="${newsRoomList.query}"></span>
+              <ul data-sly-list.listItem="${newsRoomList.list}" class="list-container">
+                  <li data-sly-test="${newsRoomList.currentPagePath!=listItem.item.path}" data-tags="${listItem.currentTags @ join=';'}" data-sly-call="${itemTemplate[newsRoomList.displayType] @ renderItem=listItem}" class="list-item ${newsRoomList.displayType}"></li>
+              </ul>
+              <div class="more-results" data-sly-test="${newsRoomList.moreResults}"><button class="more-results-btn">${'list.more' @ i18n, locale=newsRoomList.language}</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<sly data-sly-use.button="com.statoil.reinvent.components.wcmuse.Download" data-sly-unwrap> <sly
+	data-sly-use.template="statoil/components/templates/placeholder.html"
+	data-sly-call="${template.placeholder @ isEmpty = !button.buttontext}">
+</sly>
+
+<div class="component-container ${properties.space}">
+	<div class="button-content ${properties.align}"
+		data-sly-unwrap="${!button.link}">
+
+		<div data-sly-test="${button.showTitle}" data-sly-unwrap>
+			<p class="download-text" data-sly-test="${button.title}">${button.title}</p>
+			<p class="download-text"
+				data-sly-test="${button.filename && !button.title}">${button.filename}</p>
+		</div>
+
+		<a data-sly-attribute.href="${button.link}"
+			data-sly-attribute.class="${button.classList}"
+			data-sly-element="${button.element}" data-emptytext="Download"
+			target="_blank"> <span class="button-text">${button.buttontext}</span>
+			<span class="meta"> <span data-sly-test="${button.icon}"
+				class="icon si si-${button.icon}"></span> <span class="extension">${button.extension}</span>
+				<span class="filesize">${button.filesize}</span>
+		</span>
+		</a>
+	</div>
+</div>
+</sly>

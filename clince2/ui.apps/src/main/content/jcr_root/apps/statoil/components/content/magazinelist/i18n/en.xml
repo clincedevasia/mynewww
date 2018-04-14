@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="en"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <moreoption
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="magazine.list.more"
+        sling:message="More"/>
+    <showingtext
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="magazine.list.showing.text"
+        sling:message="Showing"/>
+    <storiesfortext
+        jcr:primaryType="sling:MessageEntry"
+        sling:key="magazine.list.storiesfor.text"
+        sling:message="stories for"/>
+</jcr:root>

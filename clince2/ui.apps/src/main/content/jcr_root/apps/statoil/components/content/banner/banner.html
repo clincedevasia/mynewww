@@ -1,0 +1,38 @@
+<figure class="banner ${image.angle} text-inside" data-sly-use.image="Image">
+	<img
+			src="${image.src_extralarge}"
+			srcset="${image.src_extrasmall} 100w, ${image.src_small} 1024w, ${image.src_medium} 1280w, ${image.src_large} 1537w, ${image.src_extralarge} 2000w"
+			sizes="100vw"
+			alt="${image.alternateText}"
+			title="${image.title}"
+			class="${image.classList}"
+			data-emptytext="Image"
+	/>
+	<div class="banner-content">
+		<figcaption data-sly-test="${properties.jcr:copyright}" class="figure-module_copyright">
+			${properties.jcr:copyright}
+		</figcaption>
+		<figcaption class="banner-text" data-sly-use.image_text="Text" data-sly-test="${!image_text.disableText && (image_text.title || image_text.subtitle)}">
+			<h1 data-sly-test="${image_text.title && resourcePage.name!='404'}" class="${image.shadow} ${image.color}">${image_text.title}</h1>
+			<h1 data-sly-test="${image_text.title && resourcePage.name=='404'}" class="${image.shadow} ${image.color}">${resourcePage.pageTitle}</h1>
+			<span data-sly-test="${image_text.subtitle && resourcePage.name!='404'}" class="tagline ${image.shadow} ${image.color}">${image_text.subtitle}</span>
+			<span data-sly-test="${resourcePage.name=='404'}" class="tagline ${image.shadow} ${image.color}">${resourcePage.properties.subtitle}</span>
+		</figcaption>
+	</div>
+	<div data-sly-test="${properties.pagecolor}" style="display:none" class="page-color" data-color="rgba(${properties.pagecolor_red},${properties.pagecolor_green},${properties.pagecolor_blue},1)" ></div>
+	<div data-sly-test="${properties.bottombar}" class="bottombar">
+		<span class="date">
+			<div data-sly-resource="${'date' @ resourceType='statoil/components/content/date'}" data-sly-unwrap></div>
+		</span>
+		<span class="tags" data-sly-test="${image_text.subtitle}">
+			<span class="icon fa fa-tags"></span>
+			${image_text.subtitle}
+		</span>
+		<span class="author">
+			<span class="icon fa fa-pencil"></span>
+			${properties.author}
+		</span>
+
+
+	</div>
+</figure>

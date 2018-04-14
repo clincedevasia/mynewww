@@ -1,0 +1,9 @@
+<div class="component-container ${rssFeed.space}" data-sly-use.rssFeed="com.statoil.reinvent.components.wcmuse.RssFeed">
+	<div class="edit-info" data-sly-test="${!rssFeed.title}">
+        <span class="fa fa-info-circle"></span> RSS Feed
+    </div>
+    <h2>${rssFeed.title}</h2>
+    <ul data-sly-list="${rssFeed.rssFeedLinks}">
+        <li><a href="${item.link}" target="_blank">${item.text}</a></li>
+    </ul>
+</div>

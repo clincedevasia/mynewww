@@ -1,0 +1,20 @@
+<div class="component-container ${properties.space}">
+	<figure class="figure-module" data-sly-use.icon="com.statoil.reinvent.components.wcmuse.Svgicon">
+		<a href="${icon.link}" data-sly-unwrap="${icon.link==null}" class="svglink">
+			<img data-sly-test.svgurl="${properties.svgUrl}" src="${svgurl}" class="${icon.svgType}" alt="${icon.alternateText}" />
+			<span data-sly-test.inlineSvg="${properties.inlineSvg}">
+				${inlineSvg @ context='unsafe'}
+			</span>
+			<figcaption data-sly-test="${properties.jcr:copyright}" class="figure-module_reference">
+				<span data-sly-test="${image.type!='circle'}" class="figure-module_reference-icon fa fa-camera"></span> ${properties.jcr:copyright}
+			</figcaption>
+			<figcaption data-sly-test="${properties.jcr:caption}" class="figure-module_caption">
+				${properties.jcr:caption}
+			</figcaption>
+		</a>
+	</figure>
+</div>
+
+
+
+<div data-sly-test="${!svgurl && !inlineSvg && wcmmode.edit}" class="cq-image-placeholder cq-placeholder file cq-dd-image" data-emptytext="SVG"></div>

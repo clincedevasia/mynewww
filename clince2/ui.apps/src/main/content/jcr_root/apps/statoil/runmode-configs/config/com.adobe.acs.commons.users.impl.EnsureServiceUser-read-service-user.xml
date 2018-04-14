@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    aces="[type=allow;privileges=jcr:read;path=/content/statoil,type=allow;privileges=jcr:read;path=/content/dam/statoil,type=allow;privileges=jcr:read;path=/etc,type=allow;privileges=jcr:read;path=/apps,type=allow;privileges=jcr:read;path=/libs]"
+    ensure-immediately="{Boolean}true"
+    principalName="read-service-user"
+    type="add"/>
